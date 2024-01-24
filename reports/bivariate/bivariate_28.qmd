@@ -1,0 +1,111 @@
+---
+title: Concrete Compressive Strength \#5
+order: 28
+---
+
+Bivariate 0029  [Tuebingen pair 0029]
+
+#### **Cause**: superplasticizer
+#### **Effect**: compressive strength
+
+## Descriptive statistics
+|       |      cause |    effect |
+|:------|-----------:|----------:|
+| count | 1030       | 1030      |
+| mean  |    6.20466 |   35.818  |
+| std   |    5.97384 |   16.7057 |
+| min   |    0       |    2.33   |
+| 25%   |    0       |   23.71   |
+| 50%   |    6.4     |   34.445  |
+| 75%   |   10.2     |   46.135  |
+| max   |   32.2     |   82.6    |
+
+## Scatter plot with marginals
+
+```{=html}
+<iframe width=600 height=500 src="plots/scatter_0029.html"></iframe>
+```
+
+## Time series plot (w/ index as timestep)
+
+```{=html}
+<iframe width=600 height=500 src="plots/series_0029.html"></iframe>
+```
+
+## Units
++----------+-----------------+
+| cause    | kg/m^3          |
++----------+-----------------+
+| effect   | MPa             |
++----------+-----------------+
+
+
+## Citation
+Asuncion, A. & Newman, D.J. (2007).
+UCI Machine Learning Repository [http://www.ics.uci.edu/~mlearn/MLRepository.html].
+Irvine, CA: University of California, School of Information and Computer Science.
+
+## Original source
+https://webdav.tuebingen.mpg.de/cause-effect/
+
+## Original documentation
+```
+Information for pairs0029:
+
+Concrete Compressive Strength 
+
+---------------------------------
+
+Abstract: Concrete is the most important material in civil engineering. The 
+concrete compressive strength is a highly nonlinear function of age and 
+ingredients. These ingredients include cement, blast furnace slag, fly ash, 
+water, superplasticizer, coarse aggregate, and fine aggregate.
+
+---------------------------------
+
+Sources: 
+
+  Original Owner and Donor
+  Prof. I-Cheng Yeh
+  Department of Information Management 
+  Chung-Hua University, 
+  Hsin Chu, Taiwan 30067, R.O.C.
+  e-mail:icyeh@chu.edu.tw
+  TEL:886-3-5186511
+
+  Date Donated: August 3, 2007
+ 
+---------------------------------
+
+Data Characteristics:
+    
+The actual concrete compressive strength (MPa) for a given mixture under a 
+specific age (days) was determined from laboratory. Data is in raw form (not scaled). 
+
+Number of instances (observations): 1030
+---------------------------------
+
+Name  -- Description
+
+Superplasticizer -- kg in a m3 mixture
+Concrete compressive strength -- MPa 
+
+
+x: superplasticizer
+
+y: compressive strength
+
+
+ground truth:
+x --> y
+
+
+
+```
+
+## dc_reflib's notes
+::: {.callout-note title="Operational Causality"}
+"Physics" {{< fa hand-sparkles >}} 
+
+The [compressive strength](https://en.wikipedia.org/wiki/Compressive_strength) of concrete does depend on the [composition](https://en.wikipedia.org/wiki/Concrete).
+:::

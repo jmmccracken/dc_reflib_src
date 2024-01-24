@@ -1,0 +1,74 @@
+---
+title: Population change and calorie consumption
+order: 75
+---
+
+#### **Cause**: average annual rate of change of population
+#### **Effect**: average annual rate of change of total dietary consumption for total population
+
+## Descriptive statistics
+|       |       cause |      effect |
+|:------|------------:|------------:|
+| count | 347         | 347         |
+| mean  |   0.0167147 |  -0.0216138 |
+| std   |   2.04482   |   2.70688   |
+| min   |  -7.2       |  -9.9       |
+| 25%   |  -1.6       |  -2         |
+| 50%   |   0         |  -0.2       |
+| 75%   |   1.6       |   2.2       |
+| max   |   6.7       |  11.7       |
+
+## Scatter plot with marginals
+
+```{=html}
+<iframe width=600 height=500 src="plots/scatter_0076.html"></iframe>
+```
+
+## Time series plot (w/ index as timestep)
+
+```{=html}
+<iframe width=600 height=500 src="plots/series_0076.html"></iframe>
+```
+
+## Units
++----------+-----------------+
+| cause    | person per day  |
++----------+-----------------+
+| effect   | kcal per day    |
++----------+-----------------+
+
+
+## Citation
+J. M. Mooij, J. Peters, D. Janzing, J. Zscheischler, B. Schoelkopf
+"Distinguishing cause from effect using observational data: methods and benchmarks"
+Journal of Machine Learning Research 17(32):1-102, 2016
+
+## Original source
+https://webdav.tuebingen.mpg.de/cause-effect/
+
+## Original documentation
+```
+Information for pair0076
+ 
+population growth and food consumption 
+ 
+data for 174 countries or areas, during the period from 1990-92 to 1995-97 (former 174 data points) and that from 1995-97 to 2000-02 (latter 174 points).  
+ 
+The data were taken from food security statistics provided by Food and Agriculture Organization of the United Nations (http://www.docstoc.com/docs/102679223/Food-consumption-and-population-growth---FAO);
+see http://www.fao.org/economic/ess/ess-fs/en/ .
+ 
+x (first column): the average annual rate of change of population;
+y (second column): the average annual rate of change of total dietary consumption for total population (kcal/day).
+
+Their difference (y-x) can be interpreted as the average annual rate of change of dietary energy consumption (kcal/person/day).
+
+Ground truth:
+x --> y
+```
+
+## dc_reflib's notes
+::: {.callout-note title="Operational Causality"}
+"Physics" {{< fa hand-sparkles >}} 
+
+More people implies more food energy to support those people. It's unclear if the original data is still available, but the website is still up and is a good source of background research on this topic: [UN Food and Agriculture statistics](https://www.fao.org/food-agriculture-statistics/en/).
+:::

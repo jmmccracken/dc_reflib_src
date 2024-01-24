@@ -1,0 +1,38 @@
+---
+title: "Other sources of data"
+---
+
+The data causality community is active and vibrant. Here are some data sources to help expand your own personal collection of datasets.
+
+# Tuebingen Cause-Effect Pairs
+
+A lot of the data in `dc_reflib` comes from the so-called [Tuebingen pairs](https://webdav.tuebingen.mpg.de/cause-effect/). It's a classic database in the data causality field.
+
+# Awesome Causality Data
+
+The [awesome-causality-data](https://github.com/rguo12/awesome-causality-data) collection focuses on ML/AI training sets. It is part of [Awesome Causality](https://shubhanshu.com/awesome-causality/) which is, in general, pretty awesome. Pro tip: The [awesome-causality-algorithms](https://github.com/rguo12/awesome-causality-algorithms) collection links to source code examples of various causality algorithms which often reference articles which often discuss the data they used to train. These little rabbit holes can sometimes lead to awesome datasets that cannot be found anywhere else.
+
+# Awesome Causality in CV
+
+This database is awesome, like the last one, but focused specifically on being awesome for computer vision application. Of course, [awesome-causality-in-cv](https://github.com/Wangt-CN/Awesome-Causality-in-CV) data is still awesome even if you're only interested in non-CV causality.
+
+# CMU Benchmark datasets
+
+[CMU](https://www.cmu.edu/dietrich/causality/) has a well-earned reputation for excellence in the causality research world. The [CMU-Clear benchmark](https://www.cmu.edu/dietrich/causality/projects/causal_learn_benchmarks/) database is a collection of datasets used for benchmarking their software. This is a great resource.
+
+# Causality workbench (ML challenge)
+
+The [causation and prediction challenge training data](https://www.causality.inf.ethz.ch/challenge.php?page=datasets#cont) was provided as part of the [Causality Workbench](https://www.causality.inf.ethz.ch/home.php) challenge \#1.
+
+# Causality workbench (time series challenge)
+
+The [cause-effect pairs challenge training data](https://www.causality.inf.ethz.ch/cause-effect.php?page=data) was provided as part of the Causality Workbench challenge \#3. If that data link is dead, then you can try the [Kaggle data mirror](https://www.kaggle.com/c/cause-effect-pairs/data).
+
+# Causal (textbook example) data
+
+Several authors have very kindly put up the [example data](https://github.com/NickCH-K/causaldata) used in their textbooks on causal inference.
+
+# Microsoft Benchmark datasets
+
+Microsoft has their own [suite of causality tools](https://github.com/py-why). They have also provided their [benchmark datasets](https://github.com/microsoft/csuite).
+

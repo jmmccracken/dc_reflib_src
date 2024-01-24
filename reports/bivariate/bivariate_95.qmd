@@ -1,0 +1,79 @@
+---
+title: RGB pixel intensity
+order: 100
+---
+
+#### **Cause**: grey value of a random pixel
+#### **Effect**: light intensity (seen by a photo diode placed several centimeters away)
+
+## Descriptive statistics
+|       |    cause |   effect |
+|:------|---------:|---------:|
+| count | 300      | 300      |
+| mean  | 180.393  |  69.7867 |
+| std   |  84.2588 |  26.1681 |
+| min   |   0      |  24      |
+| 25%   | 124      |  42      |
+| 50%   | 227      |  81      |
+| 75%   | 240      |  89      |
+| max   | 255      | 112      |
+
+## Scatter plot with marginals
+
+```{=html}
+<iframe width=600 height=500 src="plots/scatter_0101.html"></iframe>
+```
+
+## Time series plot (w/ index as timestep)
+
+```{=html}
+<iframe width=600 height=500 src="plots/series_0101.html"></iframe>
+```
+
+## Units
++----------+-----------------+
+| cause    | RGB value       |
++----------+-----------------+
+| effect   | lux             |
++----------+-----------------+
+{{< fa circle-exclamation >}} Units are just a guess. The original data source does not explain the measurement units. 
+
+
+## Citation
+J. M. Mooij, J. Peters, D. Janzing, J. Zscheischler, B. Schoelkopf
+"Distinguishing cause from effect using observational data: methods and benchmarks"
+Journal of Machine Learning Research 17(32):1-102, 2016
+
+## Original source
+https://webdav.tuebingen.mpg.de/cause-effect/
+
+## Original documentation
+```
+Information for pair0101:
+
+Brightness of screen
+
+This is from an experiment that has been performed to generate an example of a cause-effect relation
+that is clearly unconfounded.
+
+First column (x): grey value of a pixel that is chosen randomly from a fixed image. The grey value
+is displayed by the color of a square on a computer screen
+
+Second column (y): light intensity seen by a photo diode placed several centimeters away from the screen.  
+
+More precisely, the light intensity is measured by the 
+Adafruit TSL2591 High Dynamic Range Digital Light Sensor connected to an Arduino microcontroler. 
+https://learn.adafruit.com/adafruit-tsl2591/wiring-and-test
+
+The measurement has been performed by D. Janzing in August 2016.
+
+ground truth x->y
+
+```
+
+## dc_reflib's notes
+::: {.callout-note title="Operational Causality"}
+"Engineered" {{< fa robot >}}
+
+The experimental design description is incomplete (like the ball-on-track data sets). However, "reasonable" assumptions in this case imply that this is an engineered system where changing the RGB values of a pixel changes it's intensity _by definition_ (although see [this discussion](https://computergraphics.stackexchange.com/questions/5085/light-intensity-of-an-rgb-value) of some nuances), which might be considered causal when _only_ the RGB values are manipulated (i.e., same monitor, same geometry, etc.).
+:::

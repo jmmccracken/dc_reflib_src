@@ -1,0 +1,33 @@
+---
+title: "Note about the dc_reflib images"
+---
+
+All of the images presented within `dc_reflib` that are not obviously data plots or otherwise explicitly sourced are created with permissively licensed generative AI using "causal" prompts. 
+
+I probably used [Stable Diffusion](https://huggingface.co/spaces/stabilityai/stable-diffusion), but your mileage may vary.
+
+Here's some fun examples:
+
+* prompt: `causal graph metaphysics diagram`
+<center>
+::: {layout-nrow=2}
+![](img/feverdreams/causal_graph_metaphysics_diagram_1.jpeg){width=20%}
+![](img/feverdreams/causal_graph_metaphysics_diagram_3.jpeg){width=20%}
+:::
+</center>
+* prompt: `causality philosophy icon logo`
+<center>
+![](img/feverdreams/causality_philosophy_icon_logo_2.jpeg){width=20%}
+</center>
+* prompt: `causality physics simple lines bright colors`
+<center>
+![](img/feverdreams/causality_physics_simple_lines_bright_colors_1.jpeg){width=20%}
+</center>
+* prompt: `directed acyclic graph causality cartoon logo icon`
+<center>
+::: {layout-nrow=2}
+![](img/feverdreams/directed_acyclic_graph_causality_cartoon_logo_icon_1.jpeg){width=20%}
+![](img/feverdreams/directed_acyclic_graph_causality_cartoon_logo_icon_3.jpeg){width=20%}
+![](img/feverdreams/directed_acyclic_graph_causality_cartoon_logo_icon_4.jpeg){width=20%}
+:::
+</center>

@@ -1,0 +1,81 @@
+---
+title: Ball on mystery track \#4
+order: 102
+---
+
+#### **Cause**: initial position of ball
+#### **Effect**: time between third and fourth barriers
+
+## Descriptive statistics
+|       |    cause |   effect |
+|:------|---------:|---------:|
+| count |  109     |  109     |
+| mean  |  567.789 |  188.862 |
+| std   |  200.225 |   12.191 |
+| min   |   48     |  167     |
+| 25%   |  468     |  181     |
+| 50%   |  522     |  187     |
+| 75%   |  722     |  195     |
+| max   | 1023     |  230     |
+
+## Scatter plot with marginals
+
+```{=html}
+<iframe width=600 height=500 src="plots/scatter_0103.html"></iframe>
+```
+
+## Time series plot (w/ index as timestep)
+
+```{=html}
+<iframe width=600 height=500 src="plots/series_0103.html"></iframe>
+```
+
+## Units
++----------+-----------------+
+| cause    | normalized      |
++----------+-----------------+
+| effect   | normalized      |
++----------+-----------------+
+{{< fa circle-exclamation >}} Units are just a guess. The original data source does not explain the measurement units. 
+
+
+## Citation
+J. M. Mooij, J. Peters, D. Janzing, J. Zscheischler, B. Schoelkopf
+"Distinguishing cause from effect using observational data: methods and benchmarks"
+Journal of Machine Learning Research 17(32):1-102, 2016
+
+## Original source
+https://webdav.tuebingen.mpg.de/cause-effect/
+
+## Original documentation
+```
+Information for pair0102:
+
+position vs. passing time
+
+pair0102, pair0103, pair0104 are taken from the same run of an experiment at a ball track for children at which some sensors have been mounted to measure the following parameters:
+
+variable 1: position on the ball track where the ball starts
+variable 2: time interval between passing the first and the second light barrier.
+variable 3: time interval between passing the third and the fourth light barrier.
+
+The initial part of the track ("acceleration zone")
+has large slope, therefore the initial position is decisive for the speed the ball  gets when it rolls downwards. Therefore and because of the order of the light barriers we have the following causal chain:
+
+variable 1 ---> variable 2 --> variable 3 
+
+here we have x= variable 1, y= variable 3
+
+The data has been measured by D. Janzing in August 2016. 
+
+
+ground truth x->y
+
+```
+
+## dc_reflib's notes
+::: {.callout-note title="Operational Causality"}
+"I don't know." {{< fa dumpster-fire >}}
+
+**Same comments as "Ball on mystery track \#1"** 
+:::

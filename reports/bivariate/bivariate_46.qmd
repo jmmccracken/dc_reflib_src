@@ -1,0 +1,79 @@
+---
+title: Daily traffic for Oberschwaben, Germany
+order: 46
+---
+
+Bivariate 0047  [Tuebingen pair 0047]
+
+#### **Cause**: day of week
+#### **Effect**: daily number of cars
+
+## Descriptive statistics
+|       |   effect |      cause |
+|:------|---------:|-----------:|
+| count |   254    | 254        |
+| mean  | 11308.8  |   1.5      |
+| std   |  9146.63 |   0.500987 |
+| min   |    63    |   1        |
+| 25%   |  2056.25 |   1        |
+| 50%   | 11911.5  |   1.5      |
+| 75%   | 16727.8  |   2        |
+| max   | 47291    |   2        |
+
+## Scatter plot with marginals
+
+```{=html}
+<iframe width=600 height=500 src="plots/scatter_0047.html"></iframe>
+```
+
+## Time series plot (w/ index as timestep)
+
+```{=html}
+<iframe width=600 height=500 src="plots/series_0047.html"></iframe>
+```
+
+## Units
++----------+----------------------------------------+
+| cause    | categorical: 1 (Sundays + holidays) or |
+|          |              2	(working days)          |
++----------+----------------------------------------+
+| effect   | unitless (count)                       |
++----------+----------------------------------------+
+
+
+## Citation
+J. M. Mooij, J. Peters, D. Janzing, J. Zscheischler, B. Schoelkopf
+"Distinguishing cause from effect using observational data: methods and benchmarks"
+Journal of Machine Learning Research 17(32):1-102, 2016
+
+## Original source
+https://webdav.tuebingen.mpg.de/cause-effect/
+
+## Original documentation
+```
+Information for pair0047:
+
+Traffic
+
+x: number of cars per 24h at different counting stations in Oberschwaben, Germany
+y: categorical :
+	1 	 -> Sundays + holidays
+	2	 -> working days 
+
+Data source:
+http://www.b30-oberschwaben.de/html/tabelle.html
+
+ground truth:
+y --> x
+```
+
+## dc_reflib's notes
+The original data source is still available:
+
+[Oberschwaben traffic table](https://www.b30-oberschwaben.de/html/tabelle.html)
+
+::: {.callout-note title="Operational Causality"}
+"Physics" {{< fa hand-sparkles >}} 
+
+There is a relationship between the day of the week and traffic (see, e.g., [this study](https://www.sciencedirect.com/science/article/pii/S2095756416300290)).
+:::

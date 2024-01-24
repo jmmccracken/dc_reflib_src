@@ -1,0 +1,34 @@
+---
+title: "About Data Causality Reference Library"
+---
+
+# A collection of data causality tools
+The Data Causality Reference Library (dc_reflib) is a collection of data sets for research and algorithm testing. The data is curated specifically for use in testing <a href="https://en.wikipedia.org/wiki/Exploratory_causal_analysis"> data causality</a> (but, of course, it may be useful for other tasks too). 
+
+# Data causality
+The term *data causality*, also known as _exploratory causal analysis_ or _causal discovery_, is a subfield of causality studies. It does not need to be considered physics, mathematics, philosophy, computer science, machine learning (and/or AI), computational engineering, statistics, or even just data analysis. It is all of those things. The main thrust of the field is _*discovering*_ causality, not confirming it.
+
+# Ground truths
+Suppose I have an algorithm that "discovers" the causal relationships within my data set. How do I know I'm correct? Well, if you are the first to look at that particular data set, then you just move forward with your testing under the _assumption_ that you're correct. Another option is to apply your algorithm to a data set for which "everyone" already agrees on the causality. We will call this already-agreed-upon causality the *ground truth* of the data set.
+
+# What is "causality"?
+Good question. We will not provide an over-arching definition. Rather, each ground truth will provide an _operational causality_ used by whomever formulated the original ground truth. A good example of an operational causality is [Granger causality](https://en.wikipedia.org/wiki/Granger_causality).
+
+# Data ownership and copyrights
+We are providing the data sets in the same spirit as the original *mldata.org* and other training/research data repositories. The original data source is provided whenever possible, along with all available license information. Here is *mldata*'s "disclaimer". It applies to everything you find on this site too:
+    
+<blockquote>"We are acting in good faith to make datasets submitted for the use of the scientific community available to everybody, but if you are a copyright holder and would like us to remove a dataset please inform us and we will do it as soon as possible."</blockquote>
+
+(<a href="https://www.openml.org/">OpenML</a> has filled the void left by the untimely demise of *mldata.org*. It is an excellent source for general ML-focused data sets.)
+
+# Do you have any suggested references?
+Causality studies are at least as old as formal philosophy and probably as old as human thought. Almost every aspect of the field is fascinating, but I appreciate the overwhelming depth of the literature. Data causality itself is a comparatively young field. Here are some references I find useful (diving into the references of these works will take you down almost all the major rivers of causal studies):
+
+* Classic, landmark pillar of the field: [Causation, Prediction, and Search](https://link.springer.com/book/10.1007/978-1-4612-2748-9)
+* Selfish recommendation: [Exploratory Causal Analysis with Time Series Data](https://link.springer.com/book/10.1007/978-3-031-01909-8)
+* For the physicist: [Causal Reasoning in Physics](https://philpapers.org/rec/FRICRI-2)
+* For those who need more options: [Which causal inference book you should read](https://www.bradyneal.com/which-causal-inference-book)
+* For those who prefer lecture notes with example code: [Undergraduate Advanced Data Analysis](https://www.stat.cmu.edu/~cshalizi/uADA/12/) specifically, [Notes Chapter 25](https://www.stat.cmu.edu/~cshalizi/uADA/12/lectures/ch25.pdf)
+* For the ML/AI student who wants to stay up-to-date in the field: [Causal Reading Group](https://github.com/fulifeng/Causal_Reading_Group)
+* For the hip philosopher: [Realist Magic: Objects, Ontology, Causality](http://www.openhumanitiespress.org/books/titles/realist-magic/)
+* For the more traditional philosopher: [The Oxford Handbook of Causation](https://academic.oup.com/edited-volume/42621)

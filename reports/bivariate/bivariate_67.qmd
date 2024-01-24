@@ -1,0 +1,74 @@
+---
+title: Emissions and energy use
+order: 72
+---
+
+#### **Cause**: Energy use for different countries in different years
+#### **Effect**: CO2 emissions for different countries in different years
+
+## Descriptive statistics
+|       |      effect |      cause |
+|:------|------------:|-----------:|
+| count | 5084        |  5084      |
+| mean  |    5.80139  |  2219.37   |
+| std   |    7.98274  |  2505.73   |
+| min   |    0        |    80.3398 |
+| 25%   |    0.850531 |   526.55   |
+| 50%   |    3.25726  |  1138      |
+| 75%   |    8.11084  |  3138.63   |
+| max   |   84.4913   | 19596.3    |
+
+## Scatter plot with marginals
+
+```{=html}
+<iframe width=600 height=500 src="plots/scatter_0073.html"></iframe>
+```
+
+## Time series plot (w/ index as timestep)
+
+```{=html}
+<iframe width=600 height=500 src="plots/series_0073.html"></iframe>
+```
+
+## Units
++----------+---------------------------------+
+| cause    | kg of oil equivalent per capita |
++----------+---------------------------------+
+| effect   | million tons                    |
++----------+---------------------------------+
+{{< fa circle-exclamation >}} Units are just a guess. See notes below.
+
+
+## Citation
+J. M. Mooij, J. Peters, D. Janzing, J. Zscheischler, B. Schoelkopf
+"Distinguishing cause from effect using observational data: methods and benchmarks"
+Journal of Machine Learning Research 17(32):1-102, 2016
+
+## Original source
+https://webdav.tuebingen.mpg.de/cause-effect/
+
+## Original documentation
+```
+Information for pair0073:
+
+Energy - emission data from 152 countries  between 1960 and 2005
+
+from UNdata (http://data.un.org)
+
+
+x: CO2 emissions for different countries in different years
+
+y: Energy use (kg of oil equivalent per capita) for different countries in different years
+
+
+
+ground truth:
+y --> x
+```
+
+## dc_reflib's notes
+::: {.callout-note title="Operational Causality"}
+"Physics" {{< fa hand-sparkles >}} 
+
+Carbon emissions and human energy use are strongly correlated and widely suspected to be causally related (see, e.g., [this article](https://www.un.org/en/actnow/facts-and-figures)).
+:::

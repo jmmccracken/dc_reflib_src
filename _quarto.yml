@@ -1,0 +1,43 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "dc_reflib"
+  favicon: img/favicon/favicon.ico
+  open-graph: true
+  navbar:
+    background: primary    
+    search: true
+    tools:
+      - icon: github
+        menu:
+          - text: Source (for everything)
+            url:  https://github.com/jmmccracken
+    left:
+      - href: index.qmd
+        text: Home
+      - href: about.qmd
+        text: About
+      - href: opcausdefs.qmd
+        text: Operational Causalities
+      - href: otherdatarepos.qmd
+        text: Other Data Repos
+
+  sidebar:
+    logo: img/feverdreams/causality_philosophy_icon_logo_3.jpeg
+    style: "floating"
+    contents:
+      - section: "Data"
+        contents: reports
+      - href: noteaboutimages.qmd
+        text: Note About Images
+
+format:
+  html:
+    theme: sketchy
+    css: styles.css
+    toc: true
+
+
+

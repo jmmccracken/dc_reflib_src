@@ -1,0 +1,64 @@
+---
+title: Apartment size and rent
+order: 85
+---
+
+#### **Cause**: apartment size
+#### **Effect**: monthly rent
+
+## Descriptive statistics
+|       |     cause |   effect |
+|:------|----------:|---------:|
+| count | 666       | 666      |
+| mean  |  18.1577  | 272.395  |
+| std   |   8.64265 |  70.8049 |
+| min   |   4       |  25      |
+| 25%   |  12       | 220      |
+| 50%   |  16       | 270      |
+| 75%   |  23       | 310      |
+| max   |  80       | 500      |
+
+## Scatter plot with marginals
+
+```{=html}
+<iframe width=600 height=500 src="plots/scatter_0086.html"></iframe>
+```
+
+## Time series plot (w/ index as timestep)
+
+```{=html}
+<iframe width=600 height=500 src="plots/series_0086.html"></iframe>
+```
+
+## Units
++----------+-----------------+
+| cause    | m^2             |
++----------+-----------------+
+| effect   | Euro            |
++----------+-----------------+
+
+
+## Citation
+J. M. Mooij, J. Peters, D. Janzing, J. Zscheischler, B. Schoelkopf
+"Distinguishing cause from effect using observational data: methods and benchmarks"
+Journal of Machine Learning Research 17(32):1-102, 2016
+
+## Original source
+https://webdav.tuebingen.mpg.de/cause-effect/
+
+## Original documentation
+```
+First column:  size in m^2 of appartment/room
+Second column: monthly rent in EUR
+
+Data from kamernet.nl, gathered by Joris Mooij in 2007
+
+UPDATE v1.0: We removed two instances, with respectively size == 0 and rent == 1
+```
+
+## dc_reflib's notes
+::: {.callout-note title="Operational Causality"}
+"Physics" {{< fa hand-sparkles >}} 
+
+Larger apartments have a higher rents *if everything else is held constant* in the comparison. Apartment size is only one causal factor in determining rent; see the discussion in [this article](https://www.tandfonline.com/doi/abs/10.1080/10835547.1989.12090581).
+:::

@@ -1,0 +1,72 @@
+---
+title: National income and life expectancy
+order: 73
+---
+
+#### **Cause**: GNI (Gross national income) per capita for different countries
+#### **Effect**: life expectancy at birth for different countries
+
+## Descriptive statistics
+|       |   cause |   effect |
+|:------|--------:|---------:|
+| count |   194   | 194      |
+| mean  | 10272.5 |  67.9485 |
+| std   | 15844.6 |  10.2435 |
+| min   |   140   |  44      |
+| 25%   |  1012.5 |  61      |
+| 50%   |  3465   |  71.5    |
+| 75%   | 11867.5 |  75      |
+| max   | 87070   |  83      |
+
+## Scatter plot with marginals
+
+```{=html}
+<iframe width=600 height=500 src="plots/scatter_0074.html"></iframe>
+```
+
+## Time series plot (w/ index as timestep)
+
+```{=html}
+<iframe width=600 height=500 src="plots/series_0074.html"></iframe>
+```
+
+## Units
++----------+-----------------+
+| cause    | US dollars      |
++----------+-----------------+
+| effect   | years           |
++----------+-----------------+
+
+## Citation
+J. M. Mooij, J. Peters, D. Janzing, J. Zscheischler, B. Schoelkopf
+"Distinguishing cause from effect using observational data: methods and benchmarks"
+Journal of Machine Learning Research 17(32):1-102, 2016
+
+## Original source
+https://webdav.tuebingen.mpg.de/cause-effect/
+
+## Original documentation
+```
+Information for pair0074:
+
+UNdata from http://data.un.org
+
+Gross national income (GNI) and life expectancy. 
+One can see the GNI per capita as an index how rich a country is. 
+The wealth of a country influences the qualtity of the health care system and thus indirectly the life expectancy of its citizens.
+
+x: GNI (Gross national income) per capita for different countries (in US$)
+
+y: life expectancy at birth for different countries
+
+
+ground truth:
+x --> y
+```
+
+## dc_reflib's notes
+::: {.callout-note title="Operational Causality"}
+"Physics" {{< fa hand-sparkles >}} 
+
+Higher income is expected to increase life expectancy for a variety of reasons. See, e.g., research [here](https://genus.springeropen.com/articles/10.1186/s41118-019-0071-0) and [here](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0275431) (the literature is full of these types of studies).
+:::

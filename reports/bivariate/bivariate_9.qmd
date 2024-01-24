@@ -1,0 +1,99 @@
+---
+title: Abalone data \#6
+order: 9
+---
+
+Bivariate 0010  [Tuebingen pair 0010]
+
+#### **Cause**: Rings (integer, +1.5 gives the age in years)
+#### **Effect**: Shucked weight (continuous, weight of meat)
+
+## Descriptive statistics
+|       |      cause |      effect |
+|:------|-----------:|------------:|
+| count | 4177       | 4177        |
+| mean  |    9.93368 |    0.359367 |
+| std   |    3.22417 |    0.221963 |
+| min   |    1       |    0.001    |
+| 25%   |    8       |    0.186    |
+| 50%   |    9       |    0.336    |
+| 75%   |   11       |    0.502    |
+| max   |   29       |    1.488    |
+
+## Scatter plot with marginals
+
+```{=html}
+<iframe width=600 height=500 src="plots/scatter_0010.html"></iframe>
+```
+
+## Time series plot (w/ index as timestep)
+
+```{=html}
+<iframe width=600 height=500 src="plots/series_0010.html"></iframe>
+```
+
+## Units
++----------+-----------------------------------------------+
+| cause    | unit (count; acts as pseudo-year measurement) |
++----------+-----------------------------------------------+
+| effect   | grams                                         |
++----------+-----------------------------------------------+
+
+
+## Citation
+Asuncion, A. & Newman, D.J. (2007).
+UCI Machine Learning Repository [http://www.ics.uci.edu/~mlearn/MLRepository.html].
+Irvine, CA: University of California, School of Information and Computer Science.
+
+## Original source
+https://webdav.tuebingen.mpg.de/cause-effect/
+
+## Original documentation
+```
+Information for pairs0010:
+
+https://archive.ics.uci.edu/ml/datasets/Abalone
+
+1. Title of Database: Abalone data
+
+2. Sources:
+
+   (a) Original owners of database:
+	Marine Resources Division
+	Marine Research Laboratories - Taroona
+	Department of Primary Industry and Fisheries, Tasmania
+	GPO Box 619F, Hobart, Tasmania 7001, Australia
+	(contact: Warwick Nash +61 02 277277, wnash@dpi.tas.gov.au)
+
+   (b) Donor of database:
+	Sam Waugh (Sam.Waugh@cs.utas.edu.au)
+	Department of Computer Science, University of Tasmania
+	GPO Box 252C, Hobart, Tasmania 7001, Australia
+
+   (c) Date received: December 1995
+
+3. Attribute information:
+
+   Given is the attribute name, attribute type, the measurement unit and a
+   brief description.  
+
+	Name		Data Type	Meas.	Description
+	----		---------	-----	-----------
+x:	Rings		integer			+1.5 gives the age in years
+y:	Shucked weight	continuous	grams	weight of meat
+
+
+Ground truth:
+x --> y
+```
+
+## dc_reflib's notes
+The link to the original dataset is working and is an excellent resource:
+
+[UCI ML Repo](https://archive.ics.uci.edu/ml/datasets/Abalone)
+
+::: {.callout-note title="Operational Causality"}
+"Physics" {{< fa hand-sparkles >}} 
+
+There is an empirical relationship between age and size of Abalone (see, e.g., the [Wikipedia entry](https://en.wikipedia.org/wiki/Abalone)). The original source has an excellent discussion and further references.
+:::

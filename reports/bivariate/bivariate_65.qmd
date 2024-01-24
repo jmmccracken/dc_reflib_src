@@ -1,0 +1,79 @@
+---
+title: Generated/intended gendered images
+order: 70
+---
+
+#### **Cause**: "par" (between 0 and 14, 0 -> very female, 14 -> very male)
+#### **Effect**: test subject's rating (1 -> male, 0 -> female)
+
+## Descriptive statistics
+|       |      cause |      effect |
+|:------|-----------:|------------:|
+| count | 4499       | 4499        |
+| mean  |    6.99956 |    0.616137 |
+| std   |    4.32135 |    0.486379 |
+| min   |    0       |    0        |
+| 25%   |    3       |    0        |
+| 50%   |    7       |    1        |
+| 75%   |   11       |    1        |
+| max   |   14       |    1        |
+
+## Scatter plot with marginals
+
+```{=html}
+<iframe width=600 height=500 src="plots/scatter_0070.html"></iframe>
+```
+
+## Time series plot (w/ index as timestep)
+
+```{=html}
+<iframe width=600 height=500 src="plots/series_0070.html"></iframe>
+```
+
+## Units
++----------+-------------------+
+| cause    | unitless          |
++----------+-------------------+
+| effect   | unitless (binary) |
++----------+-------------------+
+
+
+## Citation
+J. M. Mooij, J. Peters, D. Janzing, J. Zscheischler, B. Schoelkopf
+"Distinguishing cause from effect using observational data: methods and benchmarks"
+Journal of Machine Learning Research 17(32):1-102, 2016
+
+## Original source
+https://webdav.tuebingen.mpg.de/cause-effect/
+
+## Original documentation
+```
+Information for pair0070:
+
+data taken from
+R. Armann and I.Buelthoff, 2010,
+in preparation
+MPI for Biological Cybernetics, Tuebingen, Germany
+ 
+
+Discrete data:
+
+Artificial faces were shown and varied between male and female.
+People had to say if it is male or female.
+
+The variables are:
+
+X = par (between 0 and 14, 0 -> very female, 14 -> very male)
+
+Y = sex_guess (0: female or 1: male, the subject's guess)
+
+ground truth:
+X --> Y
+```
+
+## dc_reflib's notes
+::: {.callout-note title="Operational Causality"}
+"Engineered" {{< fa robot >}}
+
+The images were designed to resemble the authors' understanding of typical male and female human faces. It is hard to know exactly what research this data was meant to support, but the authors have published articles on this topic, e.g., [Male and female faces are only perceived categorically when linked to familiar identities – And when in doubt, he is a male](https://www.sciencedirect.com/science/article/pii/S0042698912001496).
+:::

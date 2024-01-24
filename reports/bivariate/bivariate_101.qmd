@@ -1,0 +1,76 @@
+---
+title: Stirling engine
+order: 106
+---
+
+#### **Cause**: temperature
+#### **Effect**: time for 1/6 rotation
+
+## Descriptive statistics
+|       |   effect |     cause |
+|:------|---------:|----------:|
+| count | 112      | 112       |
+| mean  | 177.304  |  82.558   |
+| std   |  62.8555 |   1.38859 |
+| min   |  25      |  80.19    |
+| 25%   | 133.5    |  81.37    |
+| 50%   | 166      |  82.59    |
+| 75%   | 209.75   |  83.705   |
+| max   | 511      |  85       |
+
+## Scatter plot with marginals
+
+```{=html}
+<iframe width=600 height=500 src="plots/scatter_0108.html"></iframe>
+```
+
+## Time series plot (w/ index as timestep)
+
+```{=html}
+<iframe width=600 height=500 src="plots/series_0108.html"></iframe>
+```
+
+## Units
++----------+-----------------+
+| cause    | degree Celsius  |
++----------+-----------------+
+| effect   | normalized      |
++----------+-----------------+
+
+
+## Citation
+J. M. Mooij, J. Peters, D. Janzing, J. Zscheischler, B. Schoelkopf
+"Distinguishing cause from effect using observational data: methods and benchmarks"
+Journal of Machine Learning Research 17(32):1-102, 2016
+
+## Original source
+https://webdav.tuebingen.mpg.de/cause-effect/
+
+## Original documentation
+```
+Information for pair 108:
+
+This pair shows the dependence of the inverse velocity and the temperature of the heat bath of a Striling engine. The engine is
+driven by a cup of hot water that is put underneath.
+The inverse velocity is measured by the time needed for the engine's wheel for 1/6 rotation (because the wheel has 6 radius arms). 
+The temperature is measured by a sensor that was put into the cup. 
+
+
+
+First column (x): time for 1/6 rotation
+
+Second column (y): temperature in Degree Celsius
+
+The data set has been recorded by Dominik Janzing in 2017
+
+
+ground truth x <- y
+
+```
+
+## dc_reflib's notes
+::: {.callout-note title="Operational Causality"}
+"Engineered" {{< fa robot >}}
+
+The experimental design description is incomplete (like the ball-on-track data sets). [Stirling engines](https://en.wikipedia.org/wiki/Stirling_engine) are well-studied heat engines. The "reasonable" assumption here is that an increase in temperature corresponds to an increase in pressure. Stirling engine analyses typically discuss pressure and volume to avoid this sometimes-troublesome assumption. A good discussion of these concepts can be found in the [Stirling cycle](https://en.wikipedia.org/wiki/Stirling_cycle) Wikipedia article. This dataset presumes temperature _causes_ output work from the engine in the same way energy is typically considered a causal driver in this system (see Fig. 6 of the Stirling cycle article).
+:::

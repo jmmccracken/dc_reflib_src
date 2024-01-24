@@ -1,0 +1,79 @@
+---
+title: (Specific) Sea level pressure by day
+order: 43
+---
+
+Bivariate 0045  [Tuebingen pair 0045]
+
+#### **Cause**: mean daily sea level pressure for year 2000, day 50
+#### **Effect**: mean daily sea level pressure for year 2000, day 51
+
+## Descriptive statistics
+|       |     cause |    effect |
+|:------|----------:|----------:|
+| count |  10369    |  10369    |
+| mean  | 101025    | 100994    |
+| std   |   1449.44 |   1347.88 |
+| min   |  96465    |  96807    |
+| 25%   | 100637    | 100465    |
+| 50%   | 101250    | 101245    |
+| 75%   | 101960    | 101865    |
+| max   | 103992    | 104110    |
+
+## Scatter plot with marginals
+
+```{=html}
+<iframe width=600 height=500 src="plots/scatter_0045.html"></iframe>
+```
+
+## Time series plot (w/ index as timestep)
+
+```{=html}
+<iframe width=600 height=500 src="plots/series_0045.html"></iframe>
+```
+
+## Units
++----------+-----------------+
+| cause    | mb              |
++----------+-----------------+
+| effect   | mb              |
++----------+-----------------+
+
+
+## Citation
+J. M. Mooij, J. Peters, D. Janzing, J. Zscheischler, B. Schoelkopf
+"Distinguishing cause from effect using observational data: methods and benchmarks"
+Journal of Machine Learning Research 17(32):1-102, 2016
+
+## Original source
+https://webdav.tuebingen.mpg.de/cause-effect/
+
+## Original documentation
+```
+Information for pair0045:
+
+Mean daily sea level pressure on a 144x73 grid (2.5 degree) of day 50 and day 51 of year 2000.
+
+x: year 2000, day 50
+y: year 2000, day 51
+
+units: Pascal
+
+Data source:
+http://www.esrl.noaa.gov/psd/data/gridded/data.ncep.reanalysis.surface.html
+
+
+ground truth:
+x --> y
+```
+
+## dc_reflib's notes
+The original data source is still available:
+
+[NOAA temperature sets](https://psl.noaa.gov/data/gridded/data.ncep.reanalysis.html)
+
+::: {.callout-note title="Operational Causality"}
+"Physics" {{< fa hand-sparkles >}} 
+
+There is a relationship between the day of the year and the daily sea level pressure (see, e.g., the original data source).
+:::

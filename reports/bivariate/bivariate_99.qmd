@@ -1,0 +1,78 @@
+---
+title: Electric train on track loop
+order: 104
+---
+
+#### **Cause**: electric voltage
+#### **Effect**: time required for completing one loop
+
+## Descriptive statistics
+|       |   effect |    cause |
+|:------|---------:|---------:|
+| count |   114    | 114      |
+| mean  |  6960.24 | 467.518  |
+| std   |  1454.6  |  78.2747 |
+| min   |  5507    | 149      |
+| 25%   |  6140.75 | 429      |
+| 50%   |  6579.5  | 474.5    |
+| 75%   |  7342    | 523      |
+| max   | 14439    | 592      |
+
+## Scatter plot with marginals
+
+```{=html}
+<iframe width=600 height=500 src="plots/scatter_0106.html"></iframe>
+```
+
+## Time series plot (w/ index as timestep)
+
+```{=html}
+<iframe width=600 height=500 src="plots/series_0106.html"></iframe>
+```
+
+## Units
++----------+-----------------+
+| cause    | mV              |
++----------+-----------------+
+| effect   | sec             |
++----------+-----------------+
+{{< fa circle-exclamation >}} Units are just a guess. The original data source does not explain the measurement units. 
+
+
+
+## Citation
+J. M. Mooij, J. Peters, D. Janzing, J. Zscheischler, B. Schoelkopf
+"Distinguishing cause from effect using observational data: methods and benchmarks"
+Journal of Machine Learning Research 17(32):1-102, 2016
+
+## Original source
+https://webdav.tuebingen.mpg.de/cause-effect/
+
+## Original documentation
+```
+Information for pair0106:
+
+Speed of an electric toy locomotive
+
+
+This is from an experiment where an electric toy locomotive (Maerklin) passes one round at different speeds, controlled by varyring voltage.
+The time required by the locomotive has been measured by a pair of light barriers.  The voltage has been varied by manually changing the control knob
+of a transformer and measured by the analog input of an Arduino after sending the electric AC voltage through a rectifier.  
+
+First column (x): time required for passing one round   
+
+Second column (y): electric voltage 
+
+
+The measurement has been performed by D. Janzing in February 2017.
+
+ground truth x <- y
+
+```
+
+## dc_reflib's notes
+::: {.callout-note title="Operational Causality"}
+"Engineered" {{< fa robot >}}
+
+The experimental design description is incomplete (like the ball-on-track data sets). However, "reasonable" assumptions in this case imply that this is an engineered system where changing the voltage increases the toy train's speed _by design_. See this [article](https://dccwiki.com/Analog). 
+:::

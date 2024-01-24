@@ -1,0 +1,74 @@
+---
+title: Latitude and life expectancy (female \#1)
+order: 51
+---
+
+#### **Cause**: latitude of the country's capital
+#### **Effect**: life expectancy at birth for different countries, female, 2000-2005
+
+## Descriptive statistics
+|       |   effect |    cause |
+|:------|---------:|---------:|
+| count | 192      | 192      |
+| mean  |  69.5052 |  18.8655 |
+| std   |  11.7107 |  24.0956 |
+| min   |  39      | -41.29   |
+| 25%   |  62.75   |   4.7875 |
+| 50%   |  74      |  17.985  |
+| 75%   |  79      |  38.9225 |
+| max   |  85      |  64.14   |
+
+## Scatter plot with marginals
+
+```{=html}
+<iframe width=600 height=500 src="plots/scatter_0056.html"></iframe>
+```
+
+## Time series plot (w/ index as timestep)
+
+```{=html}
+<iframe width=600 height=500 src="plots/series_0056.html"></iframe>
+```
+
+## Units
++----------+-----------------+
+| cause    | decimal degrees |
++----------+-----------------+
+| effect   | year            |
++----------+-----------------+
+
+
+## Citation
+J. M. Mooij, J. Peters, D. Janzing, J. Zscheischler, B. Schoelkopf
+"Distinguishing cause from effect using observational data: methods and benchmarks"
+Journal of Machine Learning Research 17(32):1-102, 2016
+
+## Original source
+https://webdav.tuebingen.mpg.de/cause-effect/
+
+## Original documentation
+```
+Information for pair0056:
+
+UNdata from http://data.un.org
+
+
+x:	life expectancy at birth for different countries, female, 2000-2005
+
+y:	latitude of the country's capital
+
+China, Russia and Canada were taken out.
+
+source:
+http://data.un.org/Data.aspx?d=GenderStat&f=inID%3a37
+
+ground truth:
+y-->x
+```
+
+## dc_reflib's notes
+::: {.callout-note title="Operational Causality"}
+"Physics" {{< fa hand-sparkles >}} 
+
+There is a (currently unexplained?) relationship between latitude and life expectancy (see, e.g., [this article](https://www.pnas.org/doi/10.1073/pnas.0900300106)).
+:::

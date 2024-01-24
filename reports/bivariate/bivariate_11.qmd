@@ -1,0 +1,110 @@
+---
+title: Census Income (KDD) dataset \#1
+order: 11
+---
+
+Bivariate 0012  [Tuebingen pair 0012]
+
+#### **Cause**: Age
+#### **Effect**: Wage per hour
+
+## Descriptive statistics
+|       |     cause |   effect |
+|:------|----------:|---------:|
+| count | 5000      | 5000     |
+| mean  |   36.9776 |  979.253 |
+| std   |   13.1309 |  651.668 |
+| min   |   15      |   20     |
+| 25%   |   26      |  585     |
+| 50%   |   36      |  800     |
+| 75%   |   46      | 1200     |
+| max   |   90      | 9916     |
+
+## Scatter plot with marginals
+
+```{=html}
+<iframe width=600 height=500 src="plots/scatter_0012.html"></iframe>
+```
+
+## Time series plot (w/ index as timestep)
+
+```{=html}
+<iframe width=600 height=500 src="plots/series_0012.html"></iframe>
+```
+
+## Units
++----------+-----------------+
+| cause    | year            |
++----------+-----------------+
+| effect   | dollar          |
++----------+-----------------+
+
+::: {.callout-warning title="Units may be misleading!"}
+{{< fa triangle-exclamation >}} Weighted Data {{< fa triangle-exclamation >}} 
+
+Note from original data source: "The instance weight indicates the number of people in the population that each record represents due to stratified sampling. To do real analysis and derive conclusions, this field must be used."
+
+**The weights are not included in this bi-variate data set.**
+:::
+
+
+## Citation
+Asuncion, A. & Newman, D.J. (2007).
+UCI Machine Learning Repository [http://www.ics.uci.edu/~mlearn/MLRepository.html].
+Irvine, CA: University of California, School of Information and Computer Science.
+
+## Original source
+https://webdav.tuebingen.mpg.de/cause-effect/
+
+## Original documentation
+```
+Information for pairs0012:
+
+Census Income (KDD) dataset
+https://archive.ics.uci.edu/ml/datasets/Census-Income+(KDD)
+
+Info from the UCI ML webpage:
+
+"This data set contains weighted census data extracted from the 1994 and 1995
+current population surveys conducted by the U.S. Census Bureau.
+
+Original Owner:
+
+U.S. Census Bureau
+http://www.census.gov/
+United States Department of Commerce
+
+Donor:
+
+Terran Lane and Ronny Kohavi
+Data Mining and Visualization
+Silicon Graphics.
+terran '@' ecn.purdue.edu, ronnyk '@' sgi.com 
+
+The instance weight indicates the number of people in the population that each
+record represents due to stratified sampling. To do real analysis and derive
+conclusions, this field must be used. This attribute should *not* be used in
+the classifiers."
+
+We did not use the instance weight here.
+
+
+x: Age
+
+y: Wage per hour
+
+
+ground truth:
+x-->y
+```
+
+## dc_reflib's notes
+The link to the original dataset is working and is an excellent resource:
+
+[UCI ML Repo](https://archive.ics.uci.edu/ml/datasets/Census-Income+(KDD))
+
+::: {.callout-note title="Operational Causality"}
+"Physics" {{< fa hand-sparkles >}} 
+
+There _may be_ an empirical relationship between age and wage of a worker, but age is usually used as a proxy for work experience in studies (see, e.g., [here](https://www.jstor.org/stable/1806695)). The original source has an excellent discussion and further references.
+:::

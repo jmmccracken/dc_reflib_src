@@ -1,0 +1,73 @@
+---
+title: National income and infant mortality
+order: 74
+---
+
+#### **Cause**: GNI (Gross national income) per capita for different countries
+#### **Effect**: under 5 mortality rate for different countries 
+
+## Descriptive statistics
+|       |   effect |   cause |
+|:------|---------:|--------:|
+| count | 205      |   205   |
+| mean  |  50.239  | 10384.9 |
+| std   |  55.3809 | 15648.2 |
+| min   |   2      |   140   |
+| 25%   |  11      |  1080   |
+| 50%   |  26      |  3640   |
+| 75%   |  76      | 11905   |
+| max   | 257      | 87070   |
+
+## Scatter plot with marginals
+
+```{=html}
+<iframe width=600 height=500 src="plots/scatter_0075.html"></iframe>
+```
+
+## Time series plot (w/ index as timestep)
+
+```{=html}
+<iframe width=600 height=500 src="plots/series_0075.html"></iframe>
+```
+
+## Units
++----------+-----------------------------+
+| cause    | US dollars                  |
++----------+-----------------------------+
+| effect   | deaths per 1000 live births |
++----------+-----------------------------+
+
+
+## Citation
+J. M. Mooij, J. Peters, D. Janzing, J. Zscheischler, B. Schoelkopf
+"Distinguishing cause from effect using observational data: methods and benchmarks"
+Journal of Machine Learning Research 17(32):1-102, 2016
+
+## Original source
+https://webdav.tuebingen.mpg.de/cause-effect/
+
+## Original documentation
+```
+Information for pair0075:
+
+UNdata from http://data.un.org
+
+Gross national income (GNI) and life expectancy. 
+One can see the GNI per capita as an index how rich a country is. 
+The wealth of a country influences the qualtity of the health care system and thus indirectly the mortality rate of its children.
+
+
+x: under 5 mortality rate for different countries (deaths per 1000 live births)
+
+y: GNI (Gross national income) per capita for different countries (in US$)
+
+ground truth:
+y --> x
+```
+
+## dc_reflib's notes
+::: {.callout-note title="Operational Causality"}
+"Physics" {{< fa hand-sparkles >}} 
+
+Higher income is expected to decrease infant mortality for a variety of reasons. See, e.g., research [here](https://www.thelancet.com/journals/lancet/article/PIIS0140-6736(99)03763-0/fulltext) and [here](https://pubmed.ncbi.nlm.nih.gov/29388757/) (the literature is full of these types of studies).
+:::

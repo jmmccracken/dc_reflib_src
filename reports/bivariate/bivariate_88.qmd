@@ -1,0 +1,70 @@
+---
+title: Time of day and temperature
+order: 93
+---
+
+#### **Cause**: time of day
+#### **Effect**: temperature
+
+## Descriptive statistics
+|       |      cause |    effect |
+|:------|-----------:|----------:|
+| count | 9504       | 9504      |
+| mean  |   11.5     |   17.4452 |
+| std   |    6.92255 |   10.1579 |
+| min   |    0       |   -6.4    |
+| 25%   |    5.75    |    9      |
+| 50%   |   11.5     |   16      |
+| 75%   |   17.25    |   25.5    |
+| max   |   23       |   41.5    |
+
+## Scatter plot with marginals
+
+```{=html}
+<iframe width=600 height=500 src="plots/scatter_0094.html"></iframe>
+```
+
+## Time series plot (w/ index as timestep)
+
+```{=html}
+<iframe width=600 height=500 src="plots/series_0094.html"></iframe>
+```
+
+## Units
++----------+-----------------+
+| cause    | hour            |
++----------+-----------------+
+| effect   | degree Celsius  |
++----------+-----------------+
+
+
+## Citation
+J. M. Mooij, J. Peters, D. Janzing, J. Zscheischler, B. Schoelkopf
+"Distinguishing cause from effect using observational data: methods and benchmarks"
+Journal of Machine Learning Research 17(32):1-102, 2016
+
+## Original source
+https://webdav.tuebingen.mpg.de/cause-effect/
+
+## Original documentation
+```
+Information for pair0094:
+
+x = hour of the day
+y = temperature in degree celsius
+
+Source:
+
+The data come from a regional energy distributor in Turkey and was obtained from S. Armagan Tarim and Steve Prestwich on June 11 2015.
+
+Common sense tells us that temperature depends on the hour of the day.
+ 
+x --> y 
+```
+
+## dc_reflib's notes
+::: {.callout-note title="Operational Causality"}
+"Physics" {{< fa hand-sparkles >}} 
+
+Local temperature is strongly related to the time of day (which is itself just a measure of the positional relationship between a point on Earth and the Sun). Here's is an [introduction](https://www.globe.gov/explore-science/scientists-blog/archived-posts/sciblog/2008/02/27/how-the-temperature-varies-during-the-day-and-night/comment-page-1/index.html).
+:::

@@ -1,0 +1,73 @@
+---
+title: Fine root decomposition data (forests)
+order: 88
+---
+
+#### **Cause**: Mass loss (April 2012)
+#### **Effect**: Mass loss (October 2012)
+
+## Descriptive statistics
+|       |    effect |     cause |
+|:------|----------:|----------:|
+| count | 131       | 131       |
+| mean  |  11.6356  |   6.3129  |
+| std   |   4.38707 |   2.64684 |
+| min   |   0.85    |   0.7     |
+| 25%   |   8.66683 |   4.6     |
+| 50%   |  11.7667  |   6.033   |
+| 75%   |  14.9833  |   8.23    |
+| max   |  23.8     |  16.6     |
+
+## Scatter plot with marginals
+
+```{=html}
+<iframe width=600 height=500 src="plots/scatter_0089.html"></iframe>
+```
+
+## Time series plot (w/ index as timestep)
+
+```{=html}
+<iframe width=600 height=500 src="plots/series_0089.html"></iframe>
+```
+
+## Units
++----------+-----------------+
+| cause    | percentage      |
++----------+-----------------+
+| effect   | parcentage      |
++----------+-----------------+
+
+
+## Citation
+J. M. Mooij, J. Peters, D. Janzing, J. Zscheischler, B. Schoelkopf
+"Distinguishing cause from effect using observational data: methods and benchmarks"
+Journal of Machine Learning Research 17(32):1-102, 2016
+
+## Original source
+https://webdav.tuebingen.mpg.de/cause-effect/
+
+## Original documentation
+```
+x = Mass loss OCTOBER 2012 in %
+y = Mass loss APRIL 2012 in %
+
+Fine root decomposition data. 150 Litterbags containing fine roots were put underground to
+study decomposition rates in different ecosystems. This data set contains all experiments done in forests.
+y denotes the mass loss 6 months after the start of the experiment.
+y denotes the mass loss 1 year after the start of the experiment.
+Plots with missing data were excluded.
+
+Data taken from
+Solly et al (2014). Factors controlling decomposition rates of fine root litter in temperate forests and grasslands. Plant and Soil, 382(1-2), 203-218.
+
+Common sense tells us that at a certain point in time the total material decomposed depends on the amount decomposed at an earlier point in time.
+
+y --> x
+```
+
+## dc_reflib's notes
+::: {.callout-note title="Operational Causality"}
+"Physics" {{< fa hand-sparkles >}} 
+
+The original paper is available here: [Factors controlling decomposition rates of fine root litter in temperate forests and grasslands](https://link.springer.com/article/10.1007/s11104-014-2151-4). Appeals to "common sense" are always dangerous in causality studies, and this example is no different. There seems to be a causal relationship between mass loss at 6 months and 12 months but it depends on factors such as soil temperature and moisture. Be sure to read the paper to understand the subtleties here.
+:::

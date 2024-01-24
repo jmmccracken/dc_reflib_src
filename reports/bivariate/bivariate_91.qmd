@@ -1,0 +1,72 @@
+---
+title: Ball on mystery track \#1
+order: 96
+---
+
+#### **Cause**: initial position of ball
+#### **Effect**: final position of ball
+
+## Descriptive statistics
+|       |         cause |        effect |
+|:------|--------------:|--------------:|
+| count | 202           | 202           |
+| mean  |   0.00261271  |   0.00156597  |
+| std   |   0.000207687 |   0.000356912 |
+| min   |   0.00207039  |   0.000723589 |
+| 25%   |   0.002457    |   0.0013089   |
+| 50%   |   0.00258398  |   0.00154083  |
+| 75%   |   0.00273785  |   0.00183824  |
+| max   |   0.00318471  |   0.0022779   |
+
+## Scatter plot with marginals
+
+```{=html}
+<iframe width=600 height=500 src="plots/scatter_0097.html"></iframe>
+```
+
+## Time series plot (w/ index as timestep)
+
+```{=html}
+<iframe width=600 height=500 src="plots/series_0097.html"></iframe>
+```
+
+## Units
++----------+-----------------+
+| cause    | normalized      |
++----------+-----------------+
+| effect   | normalized      |
++----------+-----------------+
+
+## Citation
+J. M. Mooij, J. Peters, D. Janzing, J. Zscheischler, B. Schoelkopf
+"Distinguishing cause from effect using observational data: methods and benchmarks"
+Journal of Machine Learning Research 17(32):1-102, 2016
+
+## Original source
+https://webdav.tuebingen.mpg.de/cause-effect/
+
+## Original documentation
+```
+Information for pair0097
+
+initial and final speed of a ball on a ball track for children
+
+The data has been recorded by Dominik Janzing using a ball track that has been equipped with two pairs of light barriers. The first pair measures the initial speed
+ and the second pair the speed of a ball at some later position of the track. The units of the speeds are arbitrary and differ for both measurements (X and Y) since they are obtained by
+inverting the time the ball needed to pass the distance between two light barriers of one pair. 
+ 
+ The initial part of the track 
+has large slope. The initial speed is strongly determined by the exact position where the ball is put on the track. For part of the runs, the position of the ball has been chosen by D. Janzing, the other part by a 4-year old child. This should avoid that the variation of the initial position is done in a too systematic way. 
+
+Ground truth
+
+x - - > y
+
+```
+
+## dc_reflib's notes
+::: {.callout-note title="Operational Causality"}
+"I don't know." {{< fa dumpster-fire >}}
+
+Unfortunately there's not enough information in the original data description to understand why we might expect the initial position of the ball to have any influence on the final position. If we make reasonable assumptions, like the track is located on Earth and so on, then we're still left with the question of the track shape. I believe we are meant to assume the track is a ramp ("large slope") and the initial position is at the top of the ramp with a final position somewhere after the ball has stopped accelerating due to gravity. That might be a fair assumption, but there's not enough information here to have any confidence in it.
+:::

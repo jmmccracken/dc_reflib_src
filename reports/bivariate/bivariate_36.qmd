@@ -1,0 +1,95 @@
+---
+title: BUPA liver disorders \#5
+order: 36
+---
+
+Bivariate 0037  [Tuebingen pair 0037]
+
+#### **Cause**: drinks
+#### **Effect**: gammagt (gamma-glutamyl transpeptdase)
+
+## Descriptive statistics
+|       |     cause |   effect |
+|:------|----------:|---------:|
+| count | 345       | 345      |
+| mean  |   3.45507 |  38.2841 |
+| std   |   3.33784 |  39.2546 |
+| min   |   0       |   5      |
+| 25%   |   0.5     |  15      |
+| 50%   |   3       |  25      |
+| 75%   |   6       |  46      |
+| max   |  20       | 297      |
+
+## Scatter plot with marginals
+
+```{=html}
+<iframe width=600 height=500 src="plots/scatter_0037.html"></iframe>
+```
+
+## Time series plot (w/ index as timestep)
+
+```{=html}
+<iframe width=600 height=500 src="plots/series_0037.html"></iframe>
+```
+
+## Units
++----------+----------------------------------------------+
+| cause    | half-pint equivalents of alcoholic beverages |
++----------+----------------------------------------------+
+| effect   | units per liter                              |
++----------+----------------------------------------------+
+{{< fa circle-exclamation >}} Units are just a guess. The original data source does not explain the measurement units. See [this article](https://en.wikipedia.org/wiki/Gamma-glutamyltransferase) for reference.
+
+## Citation
+Asuncion, A. & Newman, D.J. (2007).
+UCI Machine Learning Repository [http://www.ics.uci.edu/~mlearn/MLRepository.html].
+Irvine, CA: University of California, School of Information and Computer Science.
+
+## Original source
+https://webdav.tuebingen.mpg.de/cause-effect/
+
+## Original documentation
+```
+Information for pairs0037:
+
+https://archive.ics.uci.edu/ml/datasets/Liver+Disorders
+
+Title: BUPA liver disorders
+
+2. Source information:
+   -- Creators: BUPA Medical Research Ltd.
+   -- Donor: Richard S. Forsyth
+             8 Grosvenor Avenue
+             Mapperley Park
+             Nottingham NG3 5DX
+             0602-621676
+   -- Date: 5/15/1990
+
+
+4. Relevant information:
+   -- The second variable is a blood test which is thought
+      to be sensitive to liver disorders that might arise from
+      excessive alcohol consumption.  Each line 
+      constitutes the record of a single male individual.
+
+x:    drinks	number of half-pint equivalents of alcoholic beverages
+                drunk per day
+
+
+y:    gammagt 	gamma-glutamyl transpeptdase
+
+
+ground truth:
+x-->y
+```
+
+## dc_reflib's notes
+The link to the original dataset is working and is an excellent resource:
+
+[UCI ML Repo](https://archive.ics.uci.edu/dataset/60/liver+disorders)
+
+::: {.callout-note title="Operational Causality"}
+"Physics" {{< fa hand-sparkles >}} 
+
+Liver disorders may be related to the number of alcoholic drinks per days; see, e.g., [these studies](https://www.researchgate.net/figure/BUPA-liver-disorders-dataset_tbl1_322102018).
+:::

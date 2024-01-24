@@ -1,0 +1,79 @@
+---
+title: (Specific) Daily temperature by day
+order: 41
+---
+
+Bivariate 0043  [Tuebingen pair 0043]
+
+#### **Cause**: mean daily temperature for year 2000, day 50
+#### **Effect**: mean daily temperature for year 2000, day 51
+
+## Descriptive statistics
+|       |      cause |     effect |
+|:------|-----------:|-----------:|
+| count | 10369      | 10369      |
+| mean  |   276.174  |   276.214  |
+| std   |    21.4086 |    21.3229 |
+| min   |   223.57   |   224.05   |
+| 25%   |   260.6    |   260.39   |
+| 50%   |   280.55   |   280.52   |
+| 75%   |   295.82   |   295.8    |
+| max   |   307.02   |   306.87   |
+
+## Scatter plot with marginals
+
+```{=html}
+<iframe width=600 height=500 src="plots/scatter_0043.html"></iframe>
+```
+
+## Time series plot (w/ index as timestep)
+
+```{=html}
+<iframe width=600 height=500 src="plots/series_0043.html"></iframe>
+```
+
+## Units
++----------+-----------------+
+| cause    | degree Celsius  |
++----------+-----------------+
+| effect   | degree Celsius  |
++----------+-----------------+
+
+
+## Citation
+J. M. Mooij, J. Peters, D. Janzing, J. Zscheischler, B. Schoelkopf
+"Distinguishing cause from effect using observational data: methods and benchmarks"
+Journal of Machine Learning Research 17(32):1-102, 2016
+
+## Original source
+https://webdav.tuebingen.mpg.de/cause-effect/
+
+## Original documentation
+```
+Information for pair0043:
+
+Mean Daily Air temperature near surface (.995 sigma level) on a 144x73 grid (2.5 degree) of day 50 and day 51 of year 2000.
+
+x: year 2000, day 50
+y: year 2000, day 51
+
+units: K
+
+Data source:
+http://www.esrl.noaa.gov/psd/data/gridded/data.ncep.reanalysis.surface.html
+
+
+ground truth:
+x --> y
+```
+
+## dc_reflib's notes
+The original data source is still available:
+
+[NOAA temperature sets](https://psl.noaa.gov/data/gridded/data.ncep.reanalysis.html)
+
+::: {.callout-note title="Operational Causality"}
+"Physics" {{< fa hand-sparkles >}} 
+
+There is a relationship between the day of the year and the daily temperature (see, e.g., the original data source).
+:::

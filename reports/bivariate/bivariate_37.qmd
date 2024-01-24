@@ -1,0 +1,114 @@
+---
+title: Pima Indians Diabetes Database \#1
+order: 37
+---
+
+Bivariate 0038  [Tuebingen pair 0038]
+
+#### **Cause**: age
+#### **Effect**: body mass index
+
+## Descriptive statistics
+|       |    cause |    effect |
+|:------|---------:|----------:|
+| count | 757      | 757       |
+| mean  |  33.2814 |  32.4575  |
+| std   |  11.6978 |   6.92499 |
+| min   |  21      |  18.2     |
+| 25%   |  24      |  27.5     |
+| 50%   |  29      |  32.3     |
+| 75%   |  41      |  36.6     |
+| max   |  81      |  67.1     |
+
+## Scatter plot with marginals
+
+```{=html}
+<iframe width=600 height=500 src="plots/scatter_0038.html"></iframe>
+```
+
+## Time series plot (w/ index as timestep)
+
+```{=html}
+<iframe width=600 height=500 src="plots/series_0038.html"></iframe>
+```
+
+## Units
++----------+--------------------------------+
+| cause    | year                           |
++----------+--------------------------------+
+| effect   | (weight in kg/(height in m)^2) |              |
++----------+--------------------------------+
+[Body mass index](https://en.wikipedia.org/wiki/Body_mass_index) is a function of a person's mass and height.
+
+
+## Citation
+Asuncion, A. & Newman, D.J. (2007).
+UCI Machine Learning Repository [http://www.ics.uci.edu/~mlearn/MLRepository.html].
+Irvine, CA: University of California, School of Information and Computer Science.
+
+## Original source
+https://webdav.tuebingen.mpg.de/cause-effect/
+
+## Original documentation
+```
+Information for pairs0038:
+
+Pima Indians Diabetes Database
+
+1. Sources:
+   (a) Original owners: National Institute of Diabetes and Digestive and
+                        Kidney Diseases
+   (b) Donor of database: Vincent Sigillito (vgs@aplcen.apl.jhu.edu)
+                          Research Center, RMI Group Leader
+                          Applied Physics Laboratory
+                          The Johns Hopkins University
+                          Johns Hopkins Road
+                          Laurel, MD 20707
+                          (301) 953-6231
+   (c) Date received: 9 May 1990
+
+2. Past Usage:
+    1. Smith,~J.~W., Everhart,~J.~E., Dickson,~W.~C., Knowler,~W.~C., \&
+       Johannes,~R.~S. (1988). Using the ADAP learning algorithm to forecast
+       the onset of diabetes mellitus.  In {\it Proceedings of the Symposium
+       on Computer Applications and Medical Care} (pp. 261--265).  IEEE
+       Computer Society Press.
+
+       The diagnostic, binary-valued variable investigated is whether the
+       patient shows signs of diabetes according to World Health Organization
+       criteria (i.e., if the 2 hour post-load plasma glucose was at least 
+       200 mg/dl at any survey  examination or if found during routine medical
+       care).   The population lives near Phoenix, Arizona, USA.
+
+3. Relevant Information:
+      Several constraints were placed on the selection of these instances from
+      a larger database.  In particular, all patients here are females at
+      least 21 years old of Pima Indian heritage.  
+
+4. Number of Instances: 768
+
+x: age
+
+y: body mass index (weight in kg/(height in m)^2)
+
+
+ground truth:
+x --> y
+
+
+UPDATE v1.0: We only kept the instances with nonzero value for BMI,
+because we believe these encode for missing values. From the UCI ML webpage:
+"UPDATE: Until 02/28/2011 the UCI ML web page indicated that there were no
+missing values in the dataset. As pointed out by a repository user, this cannot
+be true: there are zeros in places where they are biologically impossible, such
+as the blood pressure attribute. It seems very likely that zero values encode
+missing data. However, since the dataset donors made no such statement we
+encourage you to use your best judgement and state your assumptions."
+```
+
+## dc_reflib's notes
+::: {.callout-note title="Operational Causality"}
+"Physics" {{< fa hand-sparkles >}} 
+
+There is a relationship between BMI and age (see, e.g., [BMI-age charts](https://www.who.int/tools/growth-reference-data-for-5to19-years/indicators/bmi-for-age)), although note that this data set is restricted to adults--for which this relationship is much weaker and may even be non-existent (see, e.g., [these notes](https://bmi-calculator.io/)).
+:::

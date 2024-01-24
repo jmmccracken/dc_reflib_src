@@ -1,0 +1,84 @@
+---
+title: Temperature and CO2 flux \#3
+order: 82
+---
+
+#### **Cause**: Temperature
+#### **Effect**: CO2 flux (at night)
+
+## Descriptive statistics
+|       |     cause |       effect |   2 |
+|:------|----------:|-------------:|----:|
+| count | 365       | 365          | 258 |
+| mean  |   5.4158  |   2.44413    |   1 |
+| std   |   9.74997 |   2.06005    |   0 |
+| min   | -28.52    |   0.00218749 |   1 |
+| 25%   |  -1.93411 |   0.5595     |   1 |
+| 50%   |   6.20909 |   1.87243    |   1 |
+| 75%   |  13.8621  |   4.26711    |   1 |
+| max   |  22.3781  |   8.90431    |   1 |
+
+## Scatter plot with marginals
+
+```{=html}
+<iframe width=600 height=500 src="plots/scatter_0083.html"></iframe>
+```
+
+## Time series plot (w/ index as timestep)
+
+```{=html}
+<iframe width=600 height=500 src="plots/series_0083.html"></iframe>
+```
+
+## Units
++----------+-----------------+
+| cause    | degree C        |
++----------+-----------------+
+| effect   | mmol m^-2 s^-1  |
++----------+-----------------+
+
+
+## Citation
+J. M. Mooij, J. Peters, D. Janzing, J. Zscheischler, B. Schoelkopf
+"Distinguishing cause from effect using observational data: methods and benchmarks"
+Journal of Machine Learning Research 17(32):1-102, 2016
+
+## Original source
+https://webdav.tuebingen.mpg.de/cause-effect/
+
+## Original documentation
+```
+Information for pair0083:
+
+Fluxnet data
+
+The folder contains flux data where fluxes are net CO2 exchanges aggregated
+over night, and the temperature accordingly (from http://fluxnet.ornl.gov). 
+
+The site id is US-PFa
+US, Park Falls
+
+You have 365 values per site (one year).
+
+The night time CO2 is "respiration" the flux from the ecosystem to the
+atmosphere but no assumptions on flux partitioning!!! The price is high noise
+levels.
+
+x: Temperature in degree Celsius
+
+y: CO2 flux at night
+
+Pleases note that column 3 contains either NaN  if the data were filled,
+or 1 for credible values. 
+
+
+ground truth:
+x --> y
+```
+
+## dc_reflib's notes
+::: {.callout-note title="Operational Causality"}
+"Physics" {{< fa hand-sparkles >}} 
+
+The original data source is still available: [Oak Ridge Data Archive](https://daac.ornl.gov/cgi-bin/dataset_lister.pl?p=9). Local temperatures effects on CO2 flux have been studied a lot of the recent years with respect to climate change. See, e.g., the discussion in [this article](https://www.nature.com/articles/s43247-021-00192-w).
+:::

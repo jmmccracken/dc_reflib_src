@@ -1,0 +1,83 @@
+---
+title: DWD dataset \#3 
+order: 2
+---
+
+Bivariate 0003  [Tuebingen pair 0003]
+
+#### **Cause**: longitude
+#### **Effect**: temperature (averaged over 1961-1990)
+
+## Descriptive statistics
+|       |     cause |    effect |
+|:------|----------:|----------:|
+| count | 349       | 349       |
+| mean  |   9.96891 |   8.04155 |
+| std   |   1.96567 |   1.51851 |
+| min   |   6.08    |  -4.8     |
+| 25%   |   8.42    |   7.5     |
+| 50%   |   9.83    |   8.3     |
+| 75%   |  11.53    |   8.9     |
+| max   |  14.95    |  10.8     |
+
+## Scatter plot with marginals
+
+```{=html}
+<iframe width=600 height=500 src="plots/scatter_0003.html"></iframe>
+```
+
+## Time series plot (w/ index as timestep)
+
+```{=html}
+<iframe width=600 height=500 src="plots/series_0003.html"></iframe>
+```
+
+## Units
++----------+----------------------+
+| cause    | decimal degrees East |
++----------+----------------------+
+| effect   | degrees Celsius      |
++----------+----------------------+
+{{< fa circle-exclamation >}} Units are just a guess. See notes below.
+
+
+## Citation
+Asuncion, A. & Newman, D.J. (2007).
+UCI Machine Learning Repository [http://www.ics.uci.edu/~mlearn/MLRepository.html].
+Irvine, CA: University of California, School of Information and Computer Science.
+
+## Original source
+https://webdav.tuebingen.mpg.de/cause-effect/
+
+## Original documentation
+```
+Information for pairs0003:
+
+DWD data (Deutscher Wetterdienst)
+
+data was taken at 349 stations
+
+taken from
+http://www.dwd.de/bvbw/appmanager/bvbw/dwdwwwDesktop/?_nfpb=true&_pageLabel=_dwdwww_klima_umwelt_klimadaten_deutschland&T82002gsbDocumentPath=Navigation%2FOeffentlichkeit%2FKlima__Umwelt%2FKlimadaten%2Fkldaten__kostenfrei%2Fausgabe__mittelwerte__node.html__nnn%3Dtrue
+
+more recent  link (Jan 2010):
+http://www.dwd.de/bvbw/appmanager/bvbw/dwdwwwDesktop/?_nfpb=true&_pageLabel=_dwdwww_klima_umwelt_klimadaten_deutschland&T82002gsbDocumentPath=Navigation%2FOeffentlichkeit%2FKlima__Umwelt%2FKlimadaten%2Fkldaten__kostenfrei%2Fausgabe__mittelwerte__node.html__nnn%3Dtrue
+
+
+x: longitude
+
+y: temperature (averaged over 1961-1990)
+
+ground truth:
+x --> y
+
+```
+
+## dc_reflib's notes
+The link to the original dataset appears to be dead, although the dwd.de site is still around. The units are reasonable guesses but cannot be confirmed without access to the original data.
+
+::: {.callout-note title="Operational Causality"}
+"I don't know." {{< fa dumpster-fire >}} 
+
+There is a relationship between _latitude_ and temperature (see, e.g., [here](https://www.ces.fau.edu/nasa/module-3/why-does-temperature-vary/latitude.php)) but not longitude, at least on a global scale. This data covers only Germany, but there does not seem to be a clear relationship between longitude and temperature even across that restricted space (see, e.g., [this map](https://www.mapsofworld.com/germany/thematic-maps/germany-temperature-map.html)). This ground truth cannot be verified by reference, as far as I can tell.
+:::

@@ -1,0 +1,74 @@
+---
+title: Furtwagen solar radiation and temperature
+order: 76
+---
+
+#### **Cause**: daily average solar radiation (Furtwangen, Black Forest, Germany)
+#### **Effect**: daily average temperature (Furtwangen, Black Forest, Germany)
+
+## Descriptive statistics
+|       |     effect |   cause |
+|:------|-----------:|--------:|
+| count | 8401       |  8401   |
+| mean  |    5.96269 |  3065.7 |
+| std   |    7.10249 |  2198   |
+| min   |  -22.9     |    54   |
+| 25%   |    0.5     |  1198   |
+| 50%   |    6       |  2560   |
+| 75%   |   11.5     |  4647   |
+| max   |   24.9     |  9045   |
+
+## Scatter plot with marginals
+
+```{=html}
+<iframe width=600 height=500 src="plots/scatter_0077.html"></iframe>
+```
+
+## Time series plot (w/ index as timestep)
+
+```{=html}
+<iframe width=600 height=500 src="plots/series_0077.html"></iframe>
+```
+
+## Units
++----------+-----------------+
+| cause    | W/m^2           |
++----------+-----------------+
+| effect   | degrees C       |
++----------+-----------------+
+| timestep | days            |
++----------+-----------------+
+
+
+## Citation
+J. M. Mooij, J. Peters, D. Janzing, J. Zscheischler, B. Schoelkopf
+"Distinguishing cause from effect using observational data: methods and benchmarks"
+Journal of Machine Learning Research 17(32):1-102, 2016
+
+## Original source
+https://webdav.tuebingen.mpg.de/cause-effect/
+
+## Original documentation
+```
+Information for pair0077:
+
+Note: X and Y are actually time series with time step 1 day 
+
+Y is the solar radiation in W/m^2 measured in Furtwangen, Black Forest, Germany, by Bernward Janzing.
+Each value is the daily average of one day between January 1, 1985 and December 31, 2008.
+
+X is the daily average temperature of the air measured at the same location and the same days.
+
+The data are taken from a larger data set containing solar radiation averages from November 24, 1985 to December 31, 2008
+and temperature values from January 1, 1979 to  December 31, 2008.
+The original files have been provided by Bernward Janzing and processed by Dominik Janzing to extract the common time interval.
+
+Ground truth Y --> X
+```
+
+## dc_reflib's notes
+::: {.callout-note title="Operational Causality"}
+"Physics" {{< fa hand-sparkles >}} 
+
+Solar radiation is a causal factor in local temperatures; see [this article](https://en.wikipedia.org/wiki/Solar_irradiance), [this introduction](https://www.energy.gov/eere/solar/solar-radiation-basics), and [additional data](https://nsrdb.nrel.gov/).
+:::

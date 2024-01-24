@@ -1,0 +1,77 @@
+---
+title: Sunspots and global temperature
+order: 71
+---
+
+#### **Cause**: sunspot area
+#### **Effect**: global mean temperature anomalies
+
+## Descriptive statistics
+|       |     cause |       effect |
+|:------|----------:|-------------:|
+| count | 1632      | 1632         |
+| mean  |   54.8489 |   -0.0951716 |
+| std   |   47.9371 |    0.397004  |
+| min   |    0      |   -1.791     |
+| 25%   |   14.875  |   -0.34225   |
+| 50%   |   42.8    |   -0.115     |
+| 75%   |   82.3    |    0.123     |
+| max   |  253.8    |    1.369     |
+
+## Scatter plot with marginals
+
+```{=html}
+<iframe width=600 height=500 src="plots/scatter_0072.html"></iframe>
+```
+
+## Time series plot (w/ index as timestep)
+
+```{=html}
+<iframe width=600 height=500 src="plots/series_0072.html"></iframe>
+```
+
+## Units
++----------+--------------------------------------------+
+| cause    | millionths of the Sun's visible hemisphere |
++----------+--------------------------------------------+
+| effect   | degree C                                   |
++----------+--------------------------------------------+
+{{< fa circle-exclamation >}} Units are just a guess. See notes below.
+
+
+## Citation
+J. M. Mooij, J. Peters, D. Janzing, J. Zscheischler, B. Schoelkopf
+"Distinguishing cause from effect using observational data: methods and benchmarks"
+Journal of Machine Learning Research 17(32):1-102, 2016
+
+## Original source
+https://webdav.tuebingen.mpg.de/cause-effect/
+
+## Original documentation
+```
+Information for pair0072:
+
+sunspot data - timeseries with monthly values
+from 5/1874 - 4/2010 = 1632 values
+
+
+temperature data taken from 
+http://www.cru.uea.ac.uk/cru/data/temperature/
+
+sunspot data taken from
+http://solarscience.msfc.nasa.gov/SunspotCycle.shtml
+
+X = sunspot area
+
+Y = global mean temperature anomalies (deviations from 1961-1990) in C
+
+ground truth:
+X --> Y
+```
+
+## dc_reflib's notes
+::: {.callout-note title="Operational Causality"}
+"I don't know." {{< fa dumpster-fire >}} 
+
+There does not appear to be a strong relationship between sunspot area and global mean temperature; see, e.g., [NASA's more recent work](https://climate.nasa.gov/climate_resources/189/graphic-temperature-vs-solar-activity/). There are periods of time, however, in which the two series appear to be spuriously correlated. Sunspot data has been recorded for a long time. [This article](https://www.aanda.org/articles/aa/full_html/2020/08/aa37547-20/aa37547-20.html) reviews some history of these datasets.
+:::

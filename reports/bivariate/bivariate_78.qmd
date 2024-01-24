@@ -1,0 +1,74 @@
+---
+title: Population and employment
+order: 83
+---
+
+#### **Cause**: natural log of population (1980, 3102 counties in US)
+#### **Effect**: natural log of employment (1980, 3102 counties in US)
+
+## Descriptive statistics
+|       |     effect |      cause |
+|:------|-----------:|-----------:|
+| count | 3102       | 3102       |
+| mean  |    9.17401 |   10.1022  |
+| std   |    1.34708 |    1.30846 |
+| min   |    3.8067  |    4.5109  |
+| 25%   |    8.27577 |    9.25285 |
+| 50%   |    9.02365 |    9.9837  |
+| 75%   |    9.91815 |   10.8298  |
+| max   |   15.0602  |   15.8274  |
+
+## Scatter plot with marginals
+
+```{=html}
+<iframe width=600 height=500 src="plots/scatter_0084.html"></iframe>
+```
+
+## Time series plot (w/ index as timestep)
+
+```{=html}
+<iframe width=600 height=500 src="plots/series_0084.html"></iframe>
+```
+
+## Units
++----------+-----------------+
+| cause    | ln[persons]     |
++----------+-----------------+
+| effect   | ln[persons]     |
++----------+-----------------+
+{{< fa circle-exclamation >}} Units are just a guess. See notes below.
+
+## Citation
+J. M. Mooij, J. Peters, D. Janzing, J. Zscheischler, B. Schoelkopf
+"Distinguishing cause from effect using observational data: methods and benchmarks"
+Journal of Machine Learning Research 17(32):1-102, 2016
+
+## Original source
+https://webdav.tuebingen.mpg.de/cause-effect/
+
+## Original documentation
+```
+Information for pair 98
+ 
+natural logarithm of employment and natural logarithm of population 
+ 
+data for 3102 counties in US in 1980.  
+ 
+The data were taken from US county-level growth data set from Journal of Applied Econometrics web site.  Currently available at
+http://www.spatial-econometrics.com/data/contents.html .
+ 
+x (first column): the natural logarithm of employment in 1980 in 3102 counties in US;
+y (second column): the natural logorithm of the corresponding population.
+
+It seems reanable that the total population causes the employment, not vice versa. The difference (x-y) can be considered as the natural logarithm of the propotion of the emloyment.
+
+Ground truth:
+y --> x
+```
+
+## dc_reflib's notes
+::: {.callout-note title="Operational Causality"}
+"Physics" {{< fa hand-sparkles >}} 
+
+The original data source is still available: [Demonstration data sets](http://www.spatial-econometrics.com/data/contents.html). The original data does not seem focused on causality studies. There is not even a discussion of measurement units (at least one I could find). The argument here seems to be that more people are available for employment if they exist. 
+:::

@@ -1,0 +1,80 @@
+---
+title: Old Faithful geyser data
+order: 18
+---
+
+Bivariate 0019  [Tuebingen pair 0019]
+
+#### **Cause**: duration of eruption
+#### **Effect**: time to the next eruption
+
+## Descriptive statistics
+|       |      cause |   effect |
+|:------|-----------:|---------:|
+| count | 194        | 194      |
+| mean  |   3.43651  |  68.213  |
+| std   |   1.22181  |  13.5177 |
+| min   |   0.833333 |  41.2333 |
+| 25%   |   1.95417  |  55.0667 |
+| 50%   |   4.075    |  70.7333 |
+| 75%   |   4.45     |  79.2917 |
+| max   |   5.45     |  93.0833 |
+
+## Scatter plot with marginals
+
+```{=html}
+<iframe width=600 height=500 src="plots/scatter_0019.html"></iframe>
+```
+
+## Time series plot (w/ index as timestep)
+
+```{=html}
+<iframe width=600 height=500 src="plots/series_0019.html"></iframe>
+```
+
+## Units
++----------+-----------------+
+| cause    | minutes         |
++----------+-----------------+
+| effect   | minutes         |
++----------+-----------------+
+
+
+## Citation
+Asuncion, A. & Newman, D.J. (2007).
+UCI Machine Learning Repository [http://www.ics.uci.edu/~mlearn/MLRepository.html].
+Irvine, CA: University of California, School of Information and Computer Science.
+
+## Original source
+https://webdav.tuebingen.mpg.de/cause-effect/
+
+## Original documentation
+```
+Information for pairs0019:
+
+Old Faithful geyser data
+
+Old Faithful is a hydrothermal geyser in Yellowstone National Park in the state of Wyoming, USA. 
+Each observation corresponds to a single erruption.
+
+x:    duration of erruption in minutes
+
+y:    time to the next erruption in minutes
+
+
+Source
+http://research.microsoft.com/en-us/um/people/cmbishop/PRML/webdatasets/datasets.htm
+
+
+ground truth:
+x-->y
+```
+
+## dc_reflib's notes
+::: {.callout-note title="Operational Causality"}
+"Physics" {{< fa hand-sparkles >}} 
+
+There is a rich history of predicting geyser eruption times; see, e.g., [the NPS website](https://www.nps.gov/features/yell/ofvec/exhibits/eruption/prediction/predict4.htm).
+:::
+
+The original data source is dead, but there is an active database of geyser data that includes this data (and much more): [geyser archive](https://geysertimes.org/archive/).

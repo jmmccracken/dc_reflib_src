@@ -1,0 +1,11 @@
+---
+title: "Operational Causalities"
+---
+
+The data sets discussed here draw their _ground truth_ conclusions from a variety of operational causality definitions. Many of these are not formally defined. This list covers the operation causality definitions we have encountered in the data series, along with a brief description.
+
+1. "Physics" {{< fa hand-sparkles >}} --- This is a hand-waving, kicking-the-can-down-the-road definition of causality that can be summed up as "someone I trust from a field of science different from mine has said this is true". This definition _does not_ imply the ground truth is suspect, although it may be. It just means the data set author is using [appeal to authority](https://en.wikipedia.org/wiki/Argument_from_authority) for their ground truth. (The phrase "physics" is used generally here; the actual fields referenced by authors can be anything from medicine to meteorology. [It's all "physics" to us.](https://www.oxfordreference.com/display/10.1093/acref/9780191826719.001.0001/q-oro-ed4-00009051;jsessionid=E6FEE6720FB3AA19E1695E86401A09AD))
+
+2. "I don't know." {{< fa dumpster-fire >}} --- Your guess is as good as mine. Some of the data sets have ground truths that cannot be referenced, and some of those seem hard to justify. The ground truths are passed along as the original author intended, but the user should be careful when using them. 
+
+3. "Engineered" {{< fa robot >}} --- These datasets come from systems built by humans, specifically engineered such that the "detected" cause generates the "effect". It is different than the "Physics" causality in that the causal mechanism is deliberately engineered.  

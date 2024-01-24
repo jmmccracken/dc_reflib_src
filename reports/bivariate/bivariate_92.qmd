@@ -1,0 +1,75 @@
+---
+title: Ball on mystery track \#2
+order: 97
+---
+
+#### **Cause**: initial position of ball
+#### **Effect**: final position of ball
+
+## Descriptive statistics
+|       |       cause |       effect |
+|:------|------------:|-------------:|
+| count | 94          | 94           |
+| mean  |  0.00580559 |  0.00147133  |
+| std   |  0.00127143 |  0.000360861 |
+| min   |  0.00258398 |  0.000616523 |
+| 25%   |  0.00529101 |  0.00124974  |
+| 50%   |  0.00598802 |  0.00156495  |
+| 75%   |  0.00680272 |  0.00173838  |
+| max   |  0.00793651 |  0.00203252  |
+
+## Scatter plot with marginals
+
+```{=html}
+<iframe width=600 height=500 src="plots/scatter_0098.html"></iframe>
+```
+
+## Time series plot (w/ index as timestep)
+
+```{=html}
+<iframe width=600 height=500 src="plots/series_0098.html"></iframe>
+```
+
+## Units
++----------+-----------------+
+| cause    | normalized      |
++----------+-----------------+
+| effect   | normalized      |
++----------+-----------------+
+
+
+## Citation
+J. M. Mooij, J. Peters, D. Janzing, J. Zscheischler, B. Schoelkopf
+"Distinguishing cause from effect using observational data: methods and benchmarks"
+Journal of Machine Learning Research 17(32):1-102, 2016
+
+## Original source
+https://webdav.tuebingen.mpg.de/cause-effect/
+
+## Original documentation
+```
+Information for pair0098
+
+initial and final speed of a ball on a ball track for children
+
+The data has been recorded by Dominik Janzing using a ball track that has been equipped with two pairs of light barriers. The first pair measures the initial speed
+ and the second pair the speed of a ball at some later position of the track. The units of the speeds are arbitrary and differ for both measurements (X and Y) since they are obtained by
+inverting the time the ball needed to pass the distance between two light barriers of one pair. 
+ 
+ The initial part of the track ("acceleration zone")
+has large slope. The initial speed is strongly determined by the exact position where the ball is put on the acceleration zone. For part of the runs, the position of the ball has been chosen by D. Janzing, the other part by a 4-year old child. This should avoid that the variation of the initial position is done in a too systematic way. 
+The setup is actually the same as for pair0097, but for pair0098 the ball track had a longer acceleration zone, which allows for larger deviations of the initial speed. 
+
+Ground truth
+
+x - - > y
+ 
+
+```
+
+## dc_reflib's notes
+::: {.callout-note title="Operational Causality"}
+"I don't know." {{< fa dumpster-fire >}}
+
+**Same comments as "Ball on mystery track \#1"** 
+:::

@@ -1,0 +1,85 @@
+---
+title: DWD dataset \#4 
+order: 3
+---
+
+Bivariate 0004  [Tuebingen pair 0004]
+
+#### **Cause**: altitude
+#### **Effect**: sunshine (yearly value averaged over 1961-1990)
+
+## Descriptive statistics
+|       |    cause |   effect |
+|:------|---------:|---------:|
+| count |  349     |  349     |
+| mean  |  332.47  | 1536.34  |
+| std   |  339.298 |  127.912 |
+| min   |    0     | 1096.5   |
+| 25%   |   70     | 1448.3   |
+| 50%   |  255     | 1540.9   |
+| 75%   |  490     | 1635.8   |
+| max   | 2960     | 1857.5   |
+
+## Scatter plot with marginals
+
+```{=html}
+<iframe width=600 height=500 src="plots/scatter_0004.html"></iframe>
+```
+
+## Time series plot (w/ index as timestep)
+
+```{=html}
+<iframe width=600 height=500 src="plots/series_0004.html"></iframe>
+```
+
+## Units
++----------+-----------------+
+| cause    | meters          |
++----------+-----------------+
+| effect   | hours per year  |
++----------+-----------------+
+{{< fa circle-exclamation >}} Units are just a guess. See notes below.
+
+
+## Citation
+Asuncion, A. & Newman, D.J. (2007).
+UCI Machine Learning Repository [http://www.ics.uci.edu/~mlearn/MLRepository.html].
+Irvine, CA: University of California, School of Information and Computer Science.
+
+## Original source
+https://webdav.tuebingen.mpg.de/cause-effect/
+
+## Original documentation
+```
+Information for pairs0004:
+
+DWD data (Deutscher Wetterdienst)
+
+data was taken at 349 stations
+
+taken from
+http://www.dwd.de/bvbw/appmanager/bvbw/dwdwwwDesktop/?_nfpb=true&_pageLabel=_dwdwww_klima_umwelt_klimadaten_deutschland&T82002gsbDocumentPath=Navigation%2FOeffentlichkeit%2FKlima__Umwelt%2FKlimadaten%2Fkldaten__kostenfrei%2Fausgabe__mittelwerte__node.html__nnn%3Dtrue
+
+more recent  link (Jan 2010):
+http://www.dwd.de/bvbw/appmanager/bvbw/dwdwwwDesktop/?_nfpb=true&_pageLabel=_dwdwww_klima_umwelt_klimadaten_deutschland&T82002gsbDocumentPath=Navigation%2FOeffentlichkeit%2FKlima__Umwelt%2FKlimadaten%2Fkldaten__kostenfrei%2Fausgabe__mittelwerte__node.html__nnn%3Dtrue
+
+more recent link (Oct 2012):
+http://www.dwd.de/bvbw/appmanager/bvbw/dwdwwwDesktop?_nfpb=true&_pageLabel=_dwdwww_klima_umwelt_klimadaten_deutschland&T82002gsbDocumentPath=Navigation%2FOeffentlichkeit%2FKlima__Umwelt%2FKlimadaten%2Fkldaten__kostenfrei%2Fausgabe__mittelwerte__akt__node.html%3F__nnn%3Dtrue
+
+x: altitude
+
+y: sunshine (yearly value averaged over 1961-1990)
+
+ground truth:
+x --> y
+
+```
+
+## dc_reflib's notes
+The link to the original dataset appears to be dead, although the dwd.de site is still around. The units are reasonable guesses but cannot be confirmed without access to the original data.
+
+::: {.callout-note title="Operational Causality"}
+"I don't know." {{< fa dumpster-fire >}} 
+
+There may be a relationship between altitude and average sunshine in Argentina (discussed in this [paper](https://www.sciencedirect.com/science/article/abs/pii/S0960148104004057)) but those authors argue that the relationship stems from Argentina's lower elevations being more heavily wooded. This statement may or may not be true for Germany (i.e., the area covered by this data set), but the general relationship of elevation _causing_ more or less average sunshine does not appear to be true. This ground truth cannot be verified by reference, as far as I can tell.
+:::

@@ -1,0 +1,79 @@
+---
+title: (Specific) Daily pressure by day
+order: 42
+---
+
+Bivariate 0044  [Tuebingen pair 0044]
+
+#### **Cause**: mean daily pressure for year 2000, day 50
+#### **Effect**: mean daily pressure for year 2000, day 51
+
+## Descriptive statistics
+|       |    cause |    effect |
+|:------|---------:|----------:|
+| count |  10369   |  10369    |
+| mean  |  96345.9 |  96328.1  |
+| std   |   9953.9 |   9970.13 |
+| min   |  49470   |  49420    |
+| 25%   |  96960   |  97070    |
+| 50%   | 100470   | 100450    |
+| 75%   | 101550   | 101540    |
+| max   | 108530   | 108620    |
+
+## Scatter plot with marginals
+
+```{=html}
+<iframe width=600 height=500 src="plots/scatter_0044.html"></iframe>
+```
+
+## Time series plot (w/ index as timestep)
+
+```{=html}
+<iframe width=600 height=500 src="plots/series_0044.html"></iframe>
+```
+
+## Units
++----------+-----------------+
+| cause    | mb              |
++----------+-----------------+
+| effect   | mb              |
++----------+-----------------+
+
+
+## Citation
+J. M. Mooij, J. Peters, D. Janzing, J. Zscheischler, B. Schoelkopf
+"Distinguishing cause from effect using observational data: methods and benchmarks"
+Journal of Machine Learning Research 17(32):1-102, 2016
+
+## Original source
+https://webdav.tuebingen.mpg.de/cause-effect/
+
+## Original documentation
+```
+Information for pair0044:
+
+Mean Daily pressure at surface on a 144x73 grid (2.5 degree) of day 50 and day 51 of year 2000.
+
+x: year 2000, day 50
+y: year 2000, day 51
+
+units: Pascal
+
+Data source:
+http://www.esrl.noaa.gov/psd/data/gridded/data.ncep.reanalysis.surface.html
+
+
+ground truth:
+x --> y
+```
+
+## dc_reflib's notes
+The original data source is still available:
+
+[NOAA temperature sets](https://psl.noaa.gov/data/gridded/data.ncep.reanalysis.html)
+
+::: {.callout-note title="Operational Causality"}
+"Physics" {{< fa hand-sparkles >}} 
+
+There is a relationship between the day of the year and the daily pressure (see, e.g., the original data source).
+:::

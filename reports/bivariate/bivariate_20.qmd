@@ -1,0 +1,82 @@
+---
+title: DWD dataset \#6
+order: 20
+---
+
+Bivariate 0021  [Tuebingen pair 0021]
+
+#### **Cause**: longitude
+#### **Effect**: precipitation (yearly value averaged over 1961-1990)
+
+## Descriptive statistics
+|       |     cause |   effect |
+|:------|----------:|---------:|
+| count | 349       |  349     |
+| mean  |   9.96891 |  871.482 |
+| std   |   1.96567 |  319.088 |
+| min   |   6.08    |  417.1   |
+| 25%   |   8.42    |  662.6   |
+| 50%   |   9.83    |  792.8   |
+| 75%   |  11.53    |  965.2   |
+| max   |  14.95    | 2003.1   |
+
+## Scatter plot with marginals
+
+```{=html}
+<iframe width=600 height=500 src="plots/scatter_0021.html"></iframe>
+```
+
+## Time series plot (w/ index as timestep)
+
+```{=html}
+<iframe width=600 height=500 src="plots/series_0021.html"></iframe>
+```
+
+## Units
++----------+----------------------+
+| cause    | decimal degrees East |
++----------+----------------------+
+| effect   | millimeters          |
++----------+----------------------+
+{{< fa circle-exclamation >}} Units are just a guess. See notes below.
+
+
+## Citation
+Asuncion, A. & Newman, D.J. (2007).
+UCI Machine Learning Repository [http://www.ics.uci.edu/~mlearn/MLRepository.html].
+Irvine, CA: University of California, School of Information and Computer Science.
+
+## Original source
+https://webdav.tuebingen.mpg.de/cause-effect/
+
+## Original documentation
+```
+Information for pairs0021:
+
+DWD data (Deutscher Wetterdienst)
+
+data was taken at 349 stations
+
+taken from
+http://www.dwd.de/bvbw/appmanager/bvbw/dwdwwwDesktop/?_nfpb=true&_pageLabel=_dwdwww_klima_umwelt_klimadaten_deutschland&T82002gsbDocumentPath=Navigation%2FOeffentlichkeit%2FKlima__Umwelt%2FKlimadaten%2Fkldaten__kostenfrei%2Fausgabe__mittelwerte__node.html__nnn%3Dtrue
+
+more recent  link (Jan 2010):
+http://www.dwd.de/bvbw/appmanager/bvbw/dwdwwwDesktop/?_nfpb=true&_pageLabel=_dwdwww_klima_umwelt_klimadaten_deutschland&T82002gsbDocumentPath=Navigation%2FOeffentlichkeit%2FKlima__Umwelt%2FKlimadaten%2Fkldaten__kostenfrei%2Fausgabe__mittelwerte__node.html__nnn%3Dtrue
+
+
+x: longitude
+
+y: precipitation (yearly value averaged over 1961-1990)
+
+ground truth:
+x --> y
+```
+
+## dc_reflib's notes
+The link to the original dataset appears to be dead, although the dwd.de site is still around. The units are reasonable guesses but cannot be confirmed without access to the original data.
+
+::: {.callout-note title="Operational Causality"}
+"I don't know." {{< fa dumpster-fire >}} 
+
+There is a relationship between _latitude_ and precipitation (see, e.g., [here](https://wxresearch.org/how-does-latitude-affect-precipitation/)) but not longitude, at least on a global scale. This data covers only Germany, but there does not seem to be a clear relationship between longitude and precipitation even across that restricted space. This ground truth cannot be verified by reference, as far as I can tell.
+:::

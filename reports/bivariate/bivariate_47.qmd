@@ -1,0 +1,73 @@
+---
+title: Pack Thermostat
+order: 47
+---
+
+#### **Cause**: Outdoor temperature
+#### **Effect**: Indoor temperature
+
+## Descriptive statistics
+|       |    effect |     cause |
+|:------|----------:|----------:|
+| count | 168       | 168       |
+| mean  |  24.324   |  17.7694  |
+| std   |   1.48311 |   6.19721 |
+| min   |  20.6778  |   3.8889  |
+| 25%   |  23.375   |  12.2889  |
+| 50%   |  24.5944  |  18.1416  |
+| 75%   |  25.3208  |  23.3597  |
+| max   |  26.9167  |  29.5     |
+
+## Scatter plot with marginals
+
+```{=html}
+<iframe width=600 height=500 src="plots/scatter_0048.html"></iframe>
+```
+
+## Time series plot (w/ index as timestep)
+
+```{=html}
+<iframe width=600 height=500 src="plots/series_0048.html"></iframe>
+```
+
+## Units
++----------+-----------------+
+| cause    | degrees Celsius |
++----------+-----------------+
+| effect   | degrees Celsius |
++----------+-----------------+
+| timestep | hour            |
++----------+-----------------+
+{{< fa circle-exclamation >}} Units are just a guess. The original data source does not explain the measurement units.
+
+## Citation
+J. M. Mooij, J. Peters, D. Janzing, J. Zscheischler, B. Schoelkopf
+"Distinguishing cause from effect using observational data: methods and benchmarks"
+Journal of Machine Learning Research 17(32):1-102, 2016
+
+## Original source
+https://webdav.tuebingen.mpg.de/cause-effect/
+
+## Original documentation
+```
+Information for pairs0048:
+
+x: Indoor temperature 
+
+y: Outdoor temperature
+
+source:
+Hipel and Mcleod (1994): 
+Time series modelling of water resources and environmental systems
+www.stats.uwo.ca/faculty/mcleod/epubs/mhsets/readme-mhsets.html.
+
+ground truth:
+y-->x
+```
+
+## dc_reflib's notes
+::: {.callout-note title="Operational Causality"}
+"Engineered" {{< fa robot >}}
+
+This dataset was originally part of the [Hipel-McLeod  Time Series Datasets Collection](https://www.stats.uwo.ca/faculty/mcleod/epubs/mhsets/readme-mhsets.html). The description provided in that dataset collection for this specific dataset is "original data from a paper by D. Pack", which is less than helpful. A couple of emails reveals the data to come from a proposed environmental control system akin to a [thermostat](https://en.wikipedia.org/wiki/Thermostat) in a residential home. It was never made clear if this data is empirical or simulated.
+:::

@@ -1,0 +1,82 @@
+---
+title: Urinary Glycosaminoglycans (GAG)
+order: 17
+---
+
+Bivariate 0018  [Tuebingen pair 0018]
+
+#### **Cause**: age of child 
+#### **Effect**: concentration of GAG 
+
+## Descriptive statistics
+|       |     cause |    effect |
+|:------|----------:|----------:|
+| count | 314       | 314       |
+| mean  |   5.28153 |  13.1729  |
+| std   |   4.98392 |   8.99287 |
+| min   |   0       |   1.8     |
+| 25%   |   0.9625  |   6.625   |
+| 50%   |   4.1     |  10.6     |
+| 75%   |   8.27    |  17.625   |
+| max   |  17.67    |  56.3     |
+
+## Scatter plot with marginals
+
+```{=html}
+<iframe width=600 height=500 src="plots/scatter_0018.html"></iframe>
+```
+
+## Time series plot (w/ index as timestep)
+
+```{=html}
+<iframe width=600 height=500 src="plots/series_0018.html"></iframe>
+```
+
+## Units
++----------+----------------------------+
+| cause    | year                       |
++----------+----------------------------+
+| effect   | "the units have been lost" |
++----------+----------------------------+
+{{< fa circle-exclamation >}} As the original data description states: "the units have been lost".
+
+## Citation
+Asuncion, A. & Newman, D.J. (2007).
+UCI Machine Learning Repository [http://www.ics.uci.edu/~mlearn/MLRepository.html].
+Irvine, CA: University of California, School of Information and Computer Science.
+
+## Original source
+https://webdav.tuebingen.mpg.de/cause-effect/
+
+## Original documentation
+```
+Information for pairs0018:
+
+Description:
+
+Data were collected on the concentration of a chemical GAG in the urine of 314 children aged from zero to seventeen years. The aim of the study was to produce a chart to help a paediatrican to assess if a child's GAG concentration is ‘normal’.
+
+
+x:    age of child in years. 
+
+y:    concentration of GAG (the units have been lost). 
+
+Source
+
+Mrs Susan Prosser, Paediatrics Department, University of Oxford, via Department of Statistics Consulting Service.
+References
+
+Venables, W. N. and Ripley, B. D. (2002) Modern Applied Statistics with S. Fourth edition. Springer. 
+
+ground truth:
+x-->y
+```
+
+## dc_reflib's notes
+::: {.callout-note title="Operational Causality"}
+"Physics" {{< fa hand-sparkles >}} 
+
+There _may be_ an empirical relationship between age and dividends from stock, but it is not quick and easy to find references supporting that claim. The original source has an excellent discussion and further references.
+:::
+
+There are a lot of references regarding how the concentration of urinary G[Glycosaminoglycans](https://en.wikipedia.org/wiki/Glycosaminoglycan) is affected by a patient's age. See, e.g., [Turudic, Daniel, et al. "Age-Specific Excretion of Calcium, Oxalate, Citrate, and Glycosaminoglycans and Their Ratios in Healthy Children and Children with Urolithiasis." Biomolecules 11.5 (2021): 758.](https://www.mdpi.com/2218-273X/11/5/758/pdf).

@@ -1,0 +1,69 @@
+---
+title: Snowfall and temperature
+order: 86
+---
+
+#### **Cause**: mean temperature
+#### **Effect**: total daily snowfall
+
+## Descriptive statistics
+|       |      cause |     effect |
+|:------|-----------:|-----------:|
+| count | 7753       | 7753       |
+| mean  |   -1.79684 |    4.46048 |
+| std   |    6.65324 |    8.80239 |
+| min   |  -27       |    0       |
+| 25%   |   -6       |    0       |
+| 50%   |   -2.8     |    0       |
+| 75%   |    1.8     |    5       |
+| max   |   21.3     |  107       |
+
+## Scatter plot with marginals
+
+```{=html}
+<iframe width=600 height=500 src="plots/scatter_0087.html"></iframe>
+```
+
+## Time series plot (w/ index as timestep)
+
+```{=html}
+<iframe width=600 height=500 src="plots/series_0087.html"></iframe>
+```
+
+## Units
++----------+-----------------+
+| cause    | degree C        |
++----------+-----------------+
+| effect   | cm              |
++----------+-----------------+
+
+
+## Citation
+J. M. Mooij, J. Peters, D. Janzing, J. Zscheischler, B. Schoelkopf
+"Distinguishing cause from effect using observational data: methods and benchmarks"
+Journal of Machine Learning Research 17(32):1-102, 2016
+
+## Original source
+https://webdav.tuebingen.mpg.de/cause-effect/
+
+## Original documentation
+```
+Whistler Daily Snowfall (from http://www.mldata.org/repository/data/viewslug/whistler-daily-snowfall/)
+
+Historical daily snowfall data in Whistler, BC, Canada over the period July 1 1972 to December 31 2009. Measured at top of Whistler Gondola: Latitude: 50°04'04.000" N Longitude: 122°56'50.000" W Elevation: 1835.00 m 
+
+Two attributes were selected: 
+X = MeanTemp (deg Celsius)
+Y = TotalSnow (cm)
+
+Common sense tells us that X causes Y (with maybe very small feedback of Y on X). Confounders are present (e.g., day of the year).
+
+X-->Y
+```
+
+## dc_reflib's notes
+::: {.callout-note title="Operational Causality"}
+"Physics" {{< fa hand-sparkles >}} 
+
+Snow accumulation requires colder temperatures. A discussion of snow formation in general can be found [here](https://en.wikipedia.org/wiki/Snow). (Colder temperatures do not cause more snow, but _if_ snow is falling, then it cannot accumulate without freezing temperatures. Despite the notes in the original data description, the relationship between snow **accumulation** and temperature is subtly causal.)
+:::

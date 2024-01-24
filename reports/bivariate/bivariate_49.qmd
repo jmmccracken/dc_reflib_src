@@ -1,0 +1,75 @@
+---
+title: Chaumont Ozone and Temperature
+order: 49
+---
+
+#### **Cause**: Temperature 
+#### **Effect**: Ozone 
+
+## Descriptive statistics
+|       |   effect |     cause |
+|:------|---------:|----------:|
+| count | 365      | 365       |
+| mean  |  95.5082 |   6.57068 |
+| std   |  24.2507 |   7.70486 |
+| min   |  38.8    | -13.2     |
+| 25%   |  78.8    |   0       |
+| 50%   |  93.3    |   7.5     |
+| 75%   | 113.3    |  12.6     |
+| max   | 166.6    |  23.4     |
+
+## Scatter plot with marginals
+
+```{=html}
+<iframe width=600 height=500 src="plots/scatter_0050.html"></iframe>
+```
+
+## Time series plot (w/ index as timestep)
+
+```{=html}
+<iframe width=600 height=500 src="plots/series_0050.html"></iframe>
+```
+
+## Units
++----------+-------------------------+
+| cause    | degree celsius          |
++----------+-------------------------+
+| effect   | microgram / cubic meter |
++----------+-------------------------+
+| timestep | day                     |
++----------+-------------------------+
+
+
+## Citation
+J. M. Mooij, J. Peters, D. Janzing, J. Zscheischler, B. Schoelkopf
+"Distinguishing cause from effect using observational data: methods and benchmarks"
+Journal of Machine Learning Research 17(32):1-102, 2016
+
+## Original source
+https://webdav.tuebingen.mpg.de/cause-effect/
+
+## Original documentation
+```
+Information for pairs0050:
+
+Daily mean values of ozone and temperature of year 2009 in Chaumont, Switzerland
+
+x: Ozone (microgram / cubic meter)
+
+y: Temperature (degree celsius)
+
+source:
+Bundesamt fuer Umwelt (BAFU, Switzerland)
+www.bafu.admin.ch/luft/luftbelastung/blick_zurueck/datenabfrage/index.html?lang=de
+
+ground truth:
+y-->x
+```
+
+
+## dc_reflib's notes
+::: {.callout-note title="Operational Causality"}
+"Physics" {{< fa hand-sparkles >}} 
+
+Ozone concentrations are correlated with temperature (see, e.g., [this article](https://www.giss.nasa.gov/research/features/200402_tango/)).
+:::

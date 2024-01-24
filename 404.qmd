@@ -1,0 +1,9 @@
+---
+title: 404 (Page Not Found)
+---
+
+![Something went wrong. The page you want is not here. If you expect this page to be here, then the problem is probably my carelessness and/or ignorance. Try the search box.](img/feverdreams/data_causality_line_in_space_without_text_or_typography.jpeg){width=40%}
+
+
+##### Image credit
+[Stable Diffusion](https://huggingface.co/spaces/stabilityai/stable-diffusion) prompt: _data causality line in space without text or typography_

@@ -1,0 +1,108 @@
+---
+title: Auto-Mpg Data \#2
+order: 13
+---
+
+Bivariate 0014  [Tuebingen pair 0014]
+
+#### **Cause**: horsepower
+#### **Effect**: mpg
+
+## Descriptive statistics
+|       |    cause |    effect |
+|:------|---------:|----------:|
+| count | 392      | 392       |
+| mean  | 104.469  |  23.4459  |
+| std   |  38.4912 |   7.80501 |
+| min   |  46      |   9       |
+| 25%   |  75      |  17       |
+| 50%   |  93.5    |  22.75    |
+| 75%   | 126      |  29       |
+| max   | 230      |  46.6     |
+
+## Scatter plot with marginals
+
+```{=html}
+<iframe width=600 height=500 src="plots/scatter_0014.html"></iframe>
+```
+
+## Time series plot (w/ index as timestep)
+
+```{=html}
+<iframe width=600 height=500 src="plots/series_0014.html"></iframe>
+```
+
+## Units
++----------+------------------+
+| cause    | horsepower       |
++----------+------------------+
+| effect   | miles per gallon |
++----------+------------------+
+{{< fa circle-exclamation >}} Units are just a guess. See notes below.
+
+
+## Citation
+Asuncion, A. & Newman, D.J. (2007).
+UCI Machine Learning Repository [http://www.ics.uci.edu/~mlearn/MLRepository.html].
+Irvine, CA: University of California, School of Information and Computer Science.
+
+## Original source
+https://webdav.tuebingen.mpg.de/cause-effect/
+
+## Original documentation
+```
+Information for pairs0014:
+
+Auto-Mpg Data
+
+http://archive.ics.uci.edu/ml/datasets/Auto+MPG
+
+1. Sources:
+   (a) Origin:  This dataset was taken from the StatLib library which is
+                maintained at Carnegie Mellon University. The dataset was 
+                used in the 1983 American Statistical Association Exposition.
+   (c) Date: July 7, 1993
+
+2. Past Usage:
+    -  See 2b (above)
+    -  Quinlan,R. (1993). Combining Instance-Based and Model-Based Learning.
+       In Proceedings on the Tenth International Conference of Machine 
+       Learning, 236-243, University of Massachusetts, Amherst. Morgan
+       Kaufmann.
+
+3. Relevant Information:
+
+   This dataset is a slightly modified version of the dataset provided in
+   the StatLib library.  In line with the use by Ross Quinlan (1993) in
+   predicting the attribute "mpg", 8 of the original instances were removed 
+   because they had unknown values for the "mpg" attribute.  The original 
+   dataset is available in the file "auto-mpg.data-original".
+
+   "The data concerns city-cycle fuel consumption in miles per gallon,
+    to be predicted in terms of 3 multivalued discrete and 5 continuous
+    attributes." (Quinlan, 1993)
+
+Attribute information:
+
+mpg:         continuous
+horsepower:  continuous
+
+x: horsepower
+
+y: mpg
+
+ground truth:
+x --> y
+
+```
+
+## dc_reflib's notes
+Units are not discussed in the original data description. The link to the original dataset is working:
+
+[UCI ML Repo](http://archive.ics.uci.edu/ml/datasets/Auto+MPG)
+
+::: {.callout-note title="Operational Causality"}
+"Physics" {{< fa hand-sparkles >}} 
+
+There are many factors that affect a car's fuel consumption (see, e.g., [this discussion](https://natural-resources.canada.ca/energy-efficiency/transportation-alternative-fuels/personal-vehicles/choosing-right-vehicle/tips-buying-fuel-efficient-vehicle/factors-affect-fuel-efficiency/21012).)
+:::

@@ -1,0 +1,84 @@
+---
+title: DWD dataset \#2
+order: 1
+---
+
+Bivariate 0002  [Tuebingen pair 0002]
+
+#### **Cause**: altitude
+#### **Effect**: precipitation (yearly value averaged over 1961-1990)
+
+## Descriptive statistics
+|       |    cause |   effect |
+|:------|---------:|---------:|
+| count |  349     |  349     |
+| mean  |  332.47  |  871.482 |
+| std   |  339.298 |  319.088 |
+| min   |    0     |  417.1   |
+| 25%   |   70     |  662.6   |
+| 50%   |  255     |  792.8   |
+| 75%   |  490     |  965.2   |
+| max   | 2960     | 2003.1   |
+
+## Scatter plot with marginals
+
+```{=html}
+<iframe width=600 height=500 src="plots/scatter_0002.html"></iframe>
+```
+
+## Time series plot (w/ index as timestep)
+
+```{=html}
+<iframe width=600 height=500 src="plots/series_0002.html"></iframe>
+```
+
+## Units
++----------+-----------------+
+| cause    | meters          |
++----------+-----------------+
+| effect   | millimeters     |
++----------+-----------------+
+{{< fa circle-exclamation >}} Units are just a guess. See notes below.
+
+
+## Citation
+Asuncion, A. & Newman, D.J. (2007).
+UCI Machine Learning Repository [http://www.ics.uci.edu/~mlearn/MLRepository.html].
+Irvine, CA: University of California, School of Information and Computer Science.
+
+## Original source
+https://webdav.tuebingen.mpg.de/cause-effect/
+
+## Original documentation
+```
+Information for pairs0002:
+
+DWD data (Deutscher Wetterdienst)
+
+data was taken at 349 stations
+
+taken from
+http://www.dwd.de/bvbw/appmanager/bvbw/dwdwwwDesktop/?_nfpb=true&_pageLabel=_dwdwww_klima_umwelt_klimadaten_deutschland&T82002gsbDocumentPath=Navigation%2FOeffentlichkeit%2FKlima__Umwelt%2FKlimadaten%2Fkldaten__kostenfrei%2Fausgabe__mittelwerte__node.html__nnn%3Dtrue
+
+more recent  link (Jan 2010):
+http://www.dwd.de/bvbw/appmanager/bvbw/dwdwwwDesktop/?_nfpb=true&_pageLabel=_dwdwww_klima_umwelt_klimadaten_deutschland&T82002gsbDocumentPath=Navigation%2FOeffentlichkeit%2FKlima__Umwelt%2FKlimadaten%2Fkldaten__kostenfrei%2Fausgabe__mittelwerte__node.html__nnn%3Dtrue
+
+
+x: altitude
+
+y: precipitation (yearly value averaged over 1961-1990)
+
+
+ground truth:
+x --> y
+
+```
+
+## dc_reflib's notes
+The link to the original dataset appears to be dead, although the dwd.de site is still around. The units are reasonable guesses but cannot be confirmed without access to the original data.
+
+::: {.callout-note title="Operational Causality"}
+"Physics" {{< fa hand-sparkles >}} 
+
+There is a relationship between altitude and precipitation (see, e.g., [here](https://en.wikipedia.org/wiki/Altitudinal_zonation)) but it is often considered a by-product of the altitude and atmospheric temperature relationship (see [this dataset](bivariate_0.qmd)). This data uses multi-decade time averages (or maybe totals?) for the precipitation and includes no information regarding the altitude samples over that time period.
+:::

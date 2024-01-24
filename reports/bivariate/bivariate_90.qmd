@@ -1,0 +1,71 @@
+---
+title: Temperature and electricity load
+order: 95
+---
+
+#### **Cause**: temperature
+#### **Effect**: total electricity consumption in a region of Turkey
+
+## Descriptive statistics
+|       |     cause |    effect |
+|:------|----------:|----------:|
+| count | 9504      | 9504      |
+| mean  |   17.4452 |  466.898  |
+| std   |   10.1579 |   53.9128 |
+| min   |   -6.4    |  179.275  |
+| 25%   |    9      |  438.954  |
+| 50%   |   16      |  465.827  |
+| 75%   |   25.5    |  497.065  |
+| max   |   41.5    |  633.198  |
+
+## Scatter plot with marginals
+
+```{=html}
+<iframe width=600 height=500 src="plots/scatter_0096.html"></iframe>
+```
+
+## Time series plot (w/ index as timestep)
+
+```{=html}
+<iframe width=600 height=500 src="plots/series_0096.html"></iframe>
+```
+
+## Units
++----------+-----------------+
+| cause    | degrees Celsius |
++----------+-----------------+
+| effect   | MWh             |
++----------+-----------------+
+
+
+## Citation
+J. M. Mooij, J. Peters, D. Janzing, J. Zscheischler, B. Schoelkopf
+"Distinguishing cause from effect using observational data: methods and benchmarks"
+Journal of Machine Learning Research 17(32):1-102, 2016
+
+## Original source
+https://webdav.tuebingen.mpg.de/cause-effect/
+
+## Original documentation
+```
+Information for pair0096:
+
+x = temperature in degree celsius
+y = load: the total electricity consumption in a region of Turkey in "MWh"
+
+Source:
+
+The data come from a regional energy distributor in Turkey and was obtained from S. Armagan Tarim and Steve Prestwich on June 11 2015.
+
+Cold temperatures let people turn on the heating while hot temperatures might trigger them to turn on a fan or air conditioning. 
+Generally, temperature affects the use of electricity of humans, while energy consumptions does not directly influence temperature in a region.
+ 
+x --> y 
+```
+
+## dc_reflib's notes
+::: {.callout-note title="Operational Causality"}
+"Physics" {{< fa hand-sparkles >}} 
+
+The effects of temperature (and climate change) on electricity consumption is a well-studied topic. There are several studies in the literature implying a causal effect; see, e.g., [Temperature Effects on Electricity and Gas Consumption: Empirical Evidence from Mexico and Projections under Future Climate Conditions](https://www.mdpi.com/2071-1050/13/1/305).
+:::

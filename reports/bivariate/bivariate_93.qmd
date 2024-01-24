@@ -1,0 +1,85 @@
+---
+title: Socio-economic status and language tests
+order: 98
+---
+
+#### **Cause**: language test score
+#### **Effect**: social-economic status (SES) of pupil's family
+
+## Descriptive statistics
+|       |     effect |     cause |
+|:------|-----------:|----------:|
+| count | 2287       | 2287      |
+| mean  |   40.9348  |   27.812  |
+| std   |    9.00368 |   10.9078 |
+| min   |    9       |   10      |
+| 25%   |   35       |   20      |
+| 50%   |   42       |   27      |
+| 75%   |   48       |   35      |
+| max   |   58       |   50      |
+
+## Scatter plot with marginals
+
+```{=html}
+<iframe width=600 height=500 src="plots/scatter_0099.html"></iframe>
+```
+
+## Time series plot (w/ index as timestep)
+
+```{=html}
+<iframe width=600 height=500 src="plots/series_0099.html"></iframe>
+```
+
+## Units
++----------+------------------------+
+| cause    | normalized test score  |
++----------+------------------------+
+| effect   | normalized SES measure |
++----------+------------------------+
+{{< fa circle-exclamation >}} Units are just a guess. The original data source does not explain the measurement units. 
+
+
+
+## Citation
+J. M. Mooij, J. Peters, D. Janzing, J. Zscheischler, B. Schoelkopf
+"Distinguishing cause from effect using observational data: methods and benchmarks"
+Journal of Machine Learning Research 17(32):1-102, 2016
+
+## Original source
+https://webdav.tuebingen.mpg.de/cause-effect/
+
+## Original documentation
+```
+Dataset 'nlschools' from the R MASS package. 
+
+According to the description in the documentation of the package 
+(https://cran.r-project.org/web/packages/MASS/MASS.pdf ):
+
+"Snijders and Bosker (1999) use as a running example a study of 2287 eighth-grade pupils (aged
+about 11) in 132 classes in 131 schools in the Netherlands.
+
+Source:
+Snijders, T.A.B. and Bosker, R.J. (1999)
+'Multilevel Analysis. An Introduction to Basic and Advanced Multilevel Modelling.'
+London: Sage."
+
+We converted the data to a text file by the following R commands:
+
+library('MASS')
+write.matrix(nlschools,file='/tmp/nlschools.txt')
+
+X = the first column ('lang', language test score) 
+Y = the fifth column ('SES', social-economic status of pupil's family) column. 
+
+We consider SES to be one of the causes of lang, but note that selection bias may be
+present (via the choice of the classes and schools).
+
+Ground truth:  Y -> X
+```
+
+## dc_reflib's notes
+::: {.callout-note title="Operational Causality"}
+"Physics" {{< fa hand-sparkles >}}
+
+The original data source is still available [here](https://cran.r-project.org/web/packages/MASS/), [here](https://cran.r-project.org/web/packages/MASS/MASS.pdf), or [here](https://www.stats.ox.ac.uk/pub/MASS4/). The original source focused on statistical, not _causal_, analysis. There is, however, some relevant discussion on whether or not SES is a causal driver of test scores.
+:::

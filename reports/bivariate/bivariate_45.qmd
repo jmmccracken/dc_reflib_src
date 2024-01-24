@@ -1,0 +1,79 @@
+---
+title: (Specific) Relative humidity by day
+order: 44
+---
+
+Bivariate 0046  [Tuebingen pair 0046]
+
+#### **Cause**: mean daily relative humidity for year 2000, day 50
+#### **Effect**: mean daily relative humidity for year 2000, day 51
+
+## Descriptive statistics
+|       |      cause |     effect |
+|:------|-----------:|-----------:|
+| count | 10369      | 10369      |
+| mean  |    77.3866 |    75.6738 |
+| std   |    21.0719 |    22.8239 |
+| min   |     0      |     0      |
+| 25%   |    74.75   |    73.75   |
+| 50%   |    82.25   |    82      |
+| 75%   |    90.5    |    89.5    |
+| max   |   100      |   100      |
+
+## Scatter plot with marginals
+
+```{=html}
+<iframe width=600 height=500 src="plots/scatter_0046.html"></iframe>
+```
+
+## Time series plot (w/ index as timestep)
+
+```{=html}
+<iframe width=600 height=500 src="plots/series_0046.html"></iframe>
+```
+
+## Units
++----------+-----------------+
+| cause    | percentage      |
++----------+-----------------+
+| effect   | percentage      |
++----------+-----------------+
+
+
+## Citation
+J. M. Mooij, J. Peters, D. Janzing, J. Zscheischler, B. Schoelkopf
+"Distinguishing cause from effect using observational data: methods and benchmarks"
+Journal of Machine Learning Research 17(32):1-102, 2016
+
+## Original source
+https://webdav.tuebingen.mpg.de/cause-effect/
+
+## Original documentation
+```
+Information for pair0046:
+
+Mean daily relative humidity near surface (.995 sigma level) on a 144x73 grid (2.5 degree) of day 50 and day 51 of year 2000.
+
+x: year 2000, day 50
+y: year 2000, day 51
+
+units: %
+
+Data source:
+http://www.esrl.noaa.gov/psd/data/gridded/data.ncep.reanalysis.surface.html
+
+
+ground truth:
+x --> y
+```
+
+## dc_reflib's notes
+The original data source is still available:
+
+[NOAA temperature sets](https://psl.noaa.gov/data/gridded/data.ncep.reanalysis.html)
+
+::: {.callout-note title="Operational Causality"}
+"Physics" {{< fa hand-sparkles >}} 
+
+There is a relationship between the day of the year and the relative humidity (see, e.g., the original data source).
+:::

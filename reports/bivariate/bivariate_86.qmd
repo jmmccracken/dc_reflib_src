@@ -1,0 +1,69 @@
+---
+title: Soil clay content and biomass
+order: 91
+---
+
+#### **Cause**: Organic carbon content in soil
+#### **Effect**: Clay content in soil
+
+## Descriptive statistics
+|       |   effect |   cause |
+|:------|---------:|--------:|
+| count | 150      | 150     |
+| mean  |  39.5086 | 280.66  |
+| std   |  20.1121 | 203.337 |
+| min   |   6.337  |   0     |
+| 25%   |  22.795  |  58.5   |
+| 50%   |  33.4    | 289     |
+| 75%   |  57.0025 | 448.75  |
+| max   |  99.55   | 700     |
+
+## Scatter plot with marginals
+
+```{=html}
+<iframe width=600 height=500 src="plots/scatter_0092.html"></iframe>
+```
+
+## Time series plot (w/ index as timestep)
+
+```{=html}
+<iframe width=600 height=500 src="plots/series_0092.html"></iframe>
+```
+
+## Units
++----------+-----------------+
+| cause    | g/kg            |
++----------+-----------------+
+| effect   | g/kg            |
++----------+-----------------+
+
+
+## Citation
+J. M. Mooij, J. Peters, D. Janzing, J. Zscheischler, B. Schoelkopf
+"Distinguishing cause from effect using observational data: methods and benchmarks"
+Journal of Machine Learning Research 17(32):1-102, 2016
+
+## Original source
+https://webdav.tuebingen.mpg.de/cause-effect/
+
+## Original documentation
+```
+x = Organic C content in soil (in g Carbon/kg)
+y = Clay content (in g/kg)
+
+Data taken from 150 forest plots. Plots with missing data were excluded.
+
+The clay content in a soil is one determinant of how much carbon can be accumulated in a soil.
+
+Reference:
+Solly et al (2014). Factors controlling decomposition rates of fine root litter in temperate forests and grasslands. Plant and Soil, 382(1-2), 203-218.
+
+y --> x
+```
+
+## dc_reflib's notes
+::: {.callout-note title="Operational Causality"}
+"Physics" {{< fa hand-sparkles >}} 
+
+The original paper is available here: [Factors controlling decomposition rates of fine root litter in temperate forests and grasslands](https://link.springer.com/article/10.1007/s11104-014-2151-4). Clay content of soil and its biomass are causally related; see, e.g., the original data source and [this review](https://nrcca.cals.cornell.edu/soil/CA2/CA0212.1-3.php).
+:::

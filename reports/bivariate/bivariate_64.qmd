@@ -1,0 +1,75 @@
+---
+title: Indoor/Outdoor Temperature 
+order: 69
+---
+
+#### **Cause**: Outside temperature
+#### **Effect**: Inside temperature
+
+## Descriptive statistics
+|       |      effect |       cause |
+|:------|------------:|------------:|
+| count | 16382       | 16382       |
+| mean  |    20.7755  |    12.0744  |
+| std   |     1.52108 |     7.99013 |
+| min   |    17.5     |    -3       |
+| 25%   |    19.5     |     6.5     |
+| 50%   |    20.5     |    10       |
+| 75%   |    22       |    16.5     |
+| max   |    25.5     |    42.5     |
+
+## Scatter plot with marginals
+
+```{=html}
+<iframe width=600 height=500 src="plots/scatter_0069.html"></iframe>
+```
+
+## Time series plot (w/ index as timestep)
+
+```{=html}
+<iframe width=600 height=500 src="plots/series_0069.html"></iframe>
+```
+
+## Units
++----------+-----------------+
+| cause    | degrees Celsius |
++----------+-----------------+
+| effect   | degrees Celsius |
++----------+-----------------+
+| timestep | 5 minutes       |
++----------+-----------------+
+{{< fa circle-exclamation >}} Units are just a guess. See notes below.
+
+## Citation
+J. M. Mooij, J. Peters, D. Janzing, J. Zscheischler, B. Schoelkopf
+"Distinguishing cause from effect using observational data: methods and benchmarks"
+Journal of Machine Learning Research 17(32):1-102, 2016
+
+## Original source
+https://webdav.tuebingen.mpg.de/cause-effect/
+
+## Original documentation
+```
+Information for pair0069:
+
+Timeseries data - Inside (room) and outside temperature
+
+X(t) - inside room temperature in degrees Celsius
+Y(t) - outside temperature in degrees Celsius
+
+Measurements were taken every 5 minutes.
+
+Data provided by Joris M. Mooij.
+
+Ground truth:
+Y --> X
+```
+
+## dc_reflib's notes
+It seems this data was collected specifically to test cause-effect machine learning algorithms. Notice that 16,823 samples with one sample collected every five minutes is almost 57 days of collecting. I cannot find any discussion of data collection methods or error.
+
+::: {.callout-note title="Operational Causality"}
+"Engineered" {{< fa robot >}}
+
+I assume this data was collected in a residential or office setting in which there is some environmental control system akin to a [thermostat](https://en.wikipedia.org/wiki/Thermostat) in a residential home. It was never made clear if this data is empirical or simulated.
+:::

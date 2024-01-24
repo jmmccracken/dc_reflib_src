@@ -1,0 +1,76 @@
+---
+title: Gabor patch orientation and contrast
+order: 105
+---
+
+#### **Cause**: contrast
+#### **Effect**: answer correct or not
+
+## Descriptive statistics
+|       |       cause |     effect |
+|:------|------------:|-----------:|
+| count | 240         | 240        |
+| mean  |   0.03      |   0.808333 |
+| std   |   0.0105299 |   0.394435 |
+| min   |   0.015     |   0        |
+| 25%   |   0.021875  |   1        |
+| 50%   |   0.02875   |   1        |
+| 75%   |   0.03625   |   1        |
+| max   |   0.05      |   1        |
+
+## Scatter plot with marginals
+
+```{=html}
+<iframe width=600 height=500 src="plots/scatter_0107.html"></iframe>
+```
+
+## Time series plot (w/ index as timestep)
+
+```{=html}
+<iframe width=600 height=500 src="plots/series_0107.html"></iframe>
+```
+
+## Units
++----------+------------------+
+| cause    | normalized       |
++----------+------------------+
+| effect   | true(1)/false(0) |
++----------+------------------+
+ 
+
+## Citation
+J. M. Mooij, J. Peters, D. Janzing, J. Zscheischler, B. Schoelkopf
+"Distinguishing cause from effect using observational data: methods and benchmarks"
+Journal of Machine Learning Research 17(32):1-102, 2016
+
+## Original source
+https://webdav.tuebingen.mpg.de/cause-effect/
+
+## Original documentation
+```
+Information for pair0107:
+
+Direction of Gabor patches
+
+The data set is from a psychophysics experiments with human subjects. A screen shows tilted Gabor patches (which are patterns of stripes
+frequently used as stimuli in psychological experiments), either tilted to the left or to the right. The subject are asked to infer the direction, while the patches are shown with stronger or weaker contrast. The variable X describes the contrast values ranging from 0.0150 to 0.0500 in steps of 0.0025. The variable Y is a binary indicating whether the direction has been identified correctly (Y=1) or not (Y=0). For low values of the contrast the fraction of correct decisions approaches chance level (50%).
+
+
+First column (x): contrast
+
+Second column (y): answer correct or not
+
+The data set has been recorded by Heiko Schütt in 2014. 
+
+
+ground truth x -> y
+
+```
+
+
+## dc_reflib's notes
+::: {.callout-note title="Operational Causality"}
+"I don't know." {{< fa dumpster-fire >}}
+
+There is a lot of literature regarding Gabor patches (see, e.g., [Effect of contrast on the perception of moving multiple Gabor patterns](https://www.sciencedirect.com/science/article/pii/S0042698998000194)) but I cannot find any support for a causal link between contrast and orientation perception.
+:::

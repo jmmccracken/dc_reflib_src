@@ -1,0 +1,69 @@
+---
+title: Soil clay content and moisture
+order: 90
+---
+
+#### **Cause**: Clay content in soil 
+#### **Effect**: Soil moisture at 10cm depth
+
+## Descriptive statistics
+|       |   cause |    effect |
+|:------|--------:|----------:|
+| count | 149     | 149       |
+| mean  | 278.879 |  25.9245  |
+| std   | 202.846 |   9.82449 |
+| min   |   0     |   7.91979 |
+| 25%   |  57     |  17.9683  |
+| 50%   | 287     |  26.1791  |
+| 75%   | 448     |  32.593   |
+| max   | 700     |  48.0644  |
+
+## Scatter plot with marginals
+
+```{=html}
+<iframe width=600 height=500 src="plots/scatter_0091.html"></iframe>
+```
+
+## Time series plot (w/ index as timestep)
+
+```{=html}
+<iframe width=600 height=500 src="plots/series_0091.html"></iframe>
+```
+
+## Units
++----------+-----------------+
+| cause    | g/kg            |
++----------+-----------------+
+| effect   | percentage      |
++----------+-----------------+
+
+
+## Citation
+J. M. Mooij, J. Peters, D. Janzing, J. Zscheischler, B. Schoelkopf
+"Distinguishing cause from effect using observational data: methods and benchmarks"
+Journal of Machine Learning Research 17(32):1-102, 2016
+
+## Original source
+https://webdav.tuebingen.mpg.de/cause-effect/
+
+## Original documentation
+```
+x = Clay content in soil (in gram per g/kg)
+y = Soil moisture at 10cm depth (in %)
+
+Data taken from 150 forest plots. Plots with missing data were excluded.
+
+The clay content in a soil is one determinant of how much water a soil can hold.
+
+Reference:
+Solly et al (2014). Factors controlling decomposition rates of fine root litter in temperate forests and grasslands. Plant and Soil, 382(1-2), 203-218.
+
+x --> y
+```
+
+## dc_reflib's notes
+::: {.callout-note title="Operational Causality"}
+"Physics" {{< fa hand-sparkles >}} 
+
+The original paper is available here: [Factors controlling decomposition rates of fine root litter in temperate forests and grasslands](https://link.springer.com/article/10.1007/s11104-014-2151-4). The original analysis does not seem to make the claim that clay content and moisture levels are causally related, however the total moisture content of soil is known to depend on the ratio of clay; see, e.g., [this review](https://nrcca.cals.cornell.edu/soil/CA2/CA0212.1-3.php).
+:::

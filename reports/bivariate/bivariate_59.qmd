@@ -1,0 +1,74 @@
+---
+title: Infant mortality and clean drinking water
+order: 59
+---
+
+#### **Cause**: Population with sustainable access to improved drinking water sources
+#### **Effect**: Infant mortality rate (both sexes)
+
+## Descriptive statistics
+|       |    cause |   effect |
+|:------|---------:|---------:|
+| count | 162      | 162      |
+| mean  |  83.7099 |  42.6049 |
+| std   |  18.2286 |  39.7272 |
+| min   |  22      |   2      |
+| 25%   |  71.25   |  10.25   |
+| 50%   |  91      |  27.5    |
+| 75%   |  99      |  68      |
+| max   | 100      | 165      |
+
+## Scatter plot with marginals
+
+```{=html}
+<iframe width=600 height=500 src="plots/scatter_0064.html"></iframe>
+```
+
+## Time series plot (w/ index as timestep)
+
+```{=html}
+<iframe width=600 height=500 src="plots/series_0064.html"></iframe>
+```
+
+## Units
++----------+-----------------------------+
+| cause    | percentage of population    |
++----------+-----------------------------+
+| effect   | rate (per 1000 live births) |
++----------+-----------------------------+
+
+
+## Citation
+J. M. Mooij, J. Peters, D. Janzing, J. Zscheischler, B. Schoelkopf
+"Distinguishing cause from effect using observational data: methods and benchmarks"
+Journal of Machine Learning Research 17(32):1-102, 2016
+
+## Original source
+https://webdav.tuebingen.mpg.de/cause-effect/
+
+## Original documentation
+```
+Information for pair0064:
+
+UNdata from http://data.un.org
+
+
+x:	Population with sustainable access to improved drinking water sources (%) total, 2006
+
+y:	Infant mortality rate (per 1 000 live births) both sexes, 2006
+
+source:
+http://data.un.org/Data.aspx?d=WHO&f=inID%3aMBD10
+http://data.un.org/Data.aspx?d=WHO&f=inID%3aRF03
+
+ground truth:
+x-->y
+```
+
+## dc_reflib's notes
+::: {.callout-note title="Operational Causality"}
+"Physics" {{< fa hand-sparkles >}} 
+
+There is strong evidence for a relationship between clean drinking water and infant mortality (see, e.g., [this article](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4199018/) but there are _many_ more). 
+:::
+The original data seems to be missing but the original data source is still available: [UN Data](http://data.un.org/Default.aspx).
