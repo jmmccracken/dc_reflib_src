@@ -14,7 +14,7 @@ The [awesome-causality-data](https://github.com/rguo12/awesome-causality-data) c
 
 # Awesome Causality in CV
 
-This database is awesome, like the last one, but focused specifically on being awesome for computer vision application. Of course, [awesome-causality-in-cv](https://github.com/Wangt-CN/Awesome-Causality-in-CV) data is still awesome even if you're only interested in non-CV causality.
+This database is awesome, like the last one, but focused specifically on being awesome for computer vision applications. Of course, [awesome-causality-in-cv](https://github.com/Wangt-CN/Awesome-Causality-in-CV) data is still awesome even if you're only interested in non-CV causality.
 
 # CMU Benchmark datasets
 

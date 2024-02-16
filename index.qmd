@@ -54,7 +54,7 @@ Every data report includes the documentation that came from the original source,
 
 There are some basic plots meant to help you see "at a glance" if there is a strong causal relationship illustrated by the data (in your opinion, I suppose). Descriptive statistics are also provided.
 
-Finally, there's a (very brief) discussion of what [operational definition of causality](opcausdefs.qmd) I believe the data was originally intended to illustrate. Causality is a subtle and tricky business to be in. There are datasets in `dc_relib` that are, in my opinion, _not causal_ despite advertisements to the contrary. Literature links are occasionally provided in the discussions, but you are strongly encouraged to make your own conclusions about every dataset before you publish something.
+Finally, there's a (very brief) discussion of what [operational definition of causality](opcausdefs.qmd) I believe the data was originally intended to illustrate. Causality is a subtle and tricky business. There are datasets in `dc_relib` that are, in my opinion, _not causal_ despite advertisements to the contrary. Literature links are occasionally provided in the discussions, but you are strongly encouraged to make your own conclusions about every dataset before you publish something.
 
 # More information
 

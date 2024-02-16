@@ -3,10 +3,6 @@ title: Stock returns (Cheung Kong and Sun Hung Kai Prop)
 order: 62
 ---
 
-::: {.callout-important title="Auto-generated w/o Check"}
-Remove this callout after this report has been checked.
-:::
-
 #### **Cause**: stock returns of Cheung kong (0001.HK)
 #### **Effect**: stock return of Sun Hung Kai Prop. (0016.HK)
 
